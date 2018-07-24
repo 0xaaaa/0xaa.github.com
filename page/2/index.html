@@ -163,7 +163,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>&ensp;&ensp;之前在新浪博客写过一段时间，随后到CSDN，再之后到博客园，各有各的问题，最近CSDN访问老是出现问题，痛下决心，花了一天的时间按照教程搭建了一个自己的博客。<br><br>&ensp;&ensp;教程是按照<a href="https://zhangslob.github.io/2017/02/28/教你免费搭建个人博客，Hexo-Github/" target="_blank" rel="external">崔斯特的博客</a>做的，没有太大的问题，但有些小问题，不然也不会花一天的时间了，就不重复了。从上往下，挨着说：<br><br>&ensp;&ensp;1.在第三部分，设置中，本地访问<a href="http://localhost:4000" target="_blank" rel="external">localhost:4000</a>，死活进不去，最后在<a href="https://segmentfault.com/q/1010000003870970" target="_blank" rel="external">这里</a>找到了答案：可能是端口占用，这样就好了：<code>hexo server -p 4444</code><br>就是把端口换到了4444，然后访问<a href="http://localhost:4444" target="_blank" rel="external">localhost:4444</a>就行了；<br><br>&ensp;&ensp;2.注意看清命令的运行路径，不然死也不出来：<code>hexo generate</code>是在blog路径下执行的。还有就是在设置主题的时候，修改的注意对象，修改主题就在主题下面的yml，修改blog的东西就在blog下面的yml文件里面修改；<br><br>&ensp;&ensp;3.deploy时可能会报<code>error deployer not found:git</code>错误，一番检索这样<a href="http://blog.csdn.net/weixin_36401046/article/details/52940313" target="_blank" rel="external">解决</a>：需要执行<code>npm install hexo-deployer-git --save</code>；<br><br>&ensp;&ensp;别的就没什么问题，最后做下简单的记录以用于发表博客：<br><br>&ensp;&ensp;1.在任意地方或者直接在post目录下写.md文件；<br><br>&ensp;&ensp;2.打开cmder，切换到bolg文件目录，运行<code>hexo generate</code>;<br><br>&ensp;&ensp;3.最好先测试一下：<code>hexo server -p 4444</code>，没啥问题了再deploy：<code>hexo deploy</code></p>
+        <p>2017年11月12日</p>
+<p>&ensp;&ensp;之前在新浪博客写过一段时间，随后到CSDN，再之后到博客园，各有各的问题，最近CSDN访问老是出现问题，痛下决心，花了一天的时间按照教程搭建了一个自己的博客。<br><br>&ensp;&ensp;教程是按照<a href="https://zhangslob.github.io/2017/02/28/教你免费搭建个人博客，Hexo-Github/" target="_blank" rel="external">崔斯特的博客</a>做的，没有太大的问题，但有些小问题，不然也不会花一天的时间了，就不重复了。从上往下，挨着说：<br><br>&ensp;&ensp;1.在第三部分，设置中，本地访问<a href="http://localhost:4000" target="_blank" rel="external">localhost:4000</a>，死活进不去，最后在<a href="https://segmentfault.com/q/1010000003870970" target="_blank" rel="external">这里</a>找到了答案：可能是端口占用，这样就好了：<code>hexo server -p 4444</code><br>就是把端口换到了4444，然后访问<a href="http://localhost:4444" target="_blank" rel="external">localhost:4444</a>就行了；<br><br>&ensp;&ensp;2.注意看清命令的运行路径，不然死也不出来：<code>hexo generate</code>是在blog路径下执行的。还有就是在设置主题的时候，修改的注意对象，修改主题就在主题下面的yml，修改blog的东西就在blog下面的yml文件里面修改；<br><br>&ensp;&ensp;3.deploy时可能会报<code>error deployer not found:git</code>错误，一番检索这样<a href="http://blog.csdn.net/weixin_36401046/article/details/52940313" target="_blank" rel="external">解决</a>：需要执行<code>npm install hexo-deployer-git --save</code>；<br><br>&ensp;&ensp;别的就没什么问题，最后做下简单的记录以用于发表博客：<br><br>&ensp;&ensp;1.在任意地方或者直接在post目录下写.md文件；<br><br>&ensp;&ensp;2.打开cmder，切换到bolg文件目录，运行<code>hexo generate</code>;<br><br>&ensp;&ensp;3.最好先测试一下：<code>hexo server -p 4444</code>，没啥问题了再deploy：<code>hexo deploy</code></p>
+<hr>
+<p>2018年7月24日</p>
+<p>&ensp;&ensp;每次用都会出现新的问题，记录一下：</p>
+<ol>
+<li>发表博客：<br><br>&ensp;&ensp;1).在任意地方（但是最后得拷到\blog\source\ _posts）或者直接在_posts目录下写.md文件；<br><br>&ensp;&ensp;2).打开cmder，切换到_posts文件目录，运行<code>hexo generate</code>;<br><br>&ensp;&ensp;3).最好先测试一下：<code>hexo server -p 4444</code>，没啥问题了再deploy：<code>hexo deploy</code></li>
+</ol>
+<p>但是这次<code>hexo server -p 4444</code>出现了问题：</p>
+<p><img src="C:\Users\sonly\Desktop\snipaste_20180724_115506.png" alt="snipaste_20180724_115506"></p>
 
       
 
@@ -187,7 +196,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/12/博客搭建/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/11/12/博客搭建/">more >></a>
         </p>
       
 
@@ -265,7 +274,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/10/QT安装/">展开全文 >></a>
+          <a class="article-more-a" href="/2017/11/10/QT安装/">more >></a>
         </p>
       
 
