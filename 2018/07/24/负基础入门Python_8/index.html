@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tagcloud | PORTB</title>
+  <title>负基础入门Python教程_8 | PORTB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="网页描述在哪">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tagcloud">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+  <meta name="description" content="23 字符串操作23.1 转义字符反斜杠\在字符串中有特殊的含义，如果其后跟着某些字符，会产生特别效果，比如\n并不是打出一个反斜杠和n，而是将字符串换行。常见转义字符有： 123456789101112print(&apos;换\n行&apos;)print(&apos;制表\t符&apos;)print(&apos;反斜杠\\&apos;)print(&apos;单引号\&apos;&apos;)print(&quot;双引号\&quot;&quot;)# 如果代码过长，反斜杠用于续行tmp_nb = 1 +">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="负基础入门Python教程_8">
+<meta property="og:url" content="http://yoursite.com/2018/07/24/负基础入门Python_8/index.html">
 <meta property="og:site_name" content="PORTB">
-<meta property="og:description" content="网页描述在哪">
+<meta property="og:description" content="23 字符串操作23.1 转义字符反斜杠\在字符串中有特殊的含义，如果其后跟着某些字符，会产生特别效果，比如\n并不是打出一个反斜杠和n，而是将字符串换行。常见转义字符有： 123456789101112print(&apos;换\n行&apos;)print(&apos;制表\t符&apos;)print(&apos;反斜杠\\&apos;)print(&apos;单引号\&apos;&apos;)print(&quot;双引号\&quot;&quot;)# 如果代码过长，反斜杠用于续行tmp_nb = 1 +">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-31T05:49:54.686Z">
+<meta property="og:updated_time" content="2018-07-24T02:38:53.976Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tagcloud">
-<meta name="twitter:description" content="网页描述在哪">
+<meta name="twitter:title" content="负基础入门Python教程_8">
+<meta name="twitter:description" content="23 字符串操作23.1 转义字符反斜杠\在字符串中有特殊的含义，如果其后跟着某些字符，会产生特别效果，比如\n并不是打出一个反斜杠和n，而是将字符串换行。常见转义字符有： 123456789101112print(&apos;换\n行&apos;)print(&apos;制表\t符&apos;)print(&apos;反斜杠\\&apos;)print(&apos;单引号\&apos;&apos;)print(&quot;双引号\&quot;&quot;)# 如果代码过长，反斜杠用于续行tmp_nb = 1 +">
   
     <link rel="alternative" href="/atom.xml" title="PORTB" type="application/atom+xml">
   
@@ -142,27 +143,115 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-负基础入门Python_8" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Tagcloud
+      负基础入门Python教程_8
     </h1>
   
 
         
-        <a href="/tags/index.html" class="archive-article-date">
-  	<time datetime="2017-10-31T05:37:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
+        <a href="/2018/07/24/负基础入门Python_8/" class="archive-article-date">
+  	<time datetime="2018-07-24T02:39:23.670Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="23-字符串操作"><a href="#23-字符串操作" class="headerlink" title="23 字符串操作"></a>23 字符串操作</h2><h3 id="23-1-转义字符"><a href="#23-1-转义字符" class="headerlink" title="23.1 转义字符"></a>23.1 转义字符</h3><p>反斜杠\在字符串中有特殊的含义，如果其后跟着某些字符，会产生特别效果，比如\n并不是打出一个反斜杠和n，而是将字符串换行。常见转义字符有：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">print(<span class="string">'换\n行'</span>)</div><div class="line">print(<span class="string">'制表\t符'</span>)</div><div class="line">print(<span class="string">'反斜杠\\'</span>)</div><div class="line">print(<span class="string">'单引号\''</span>)</div><div class="line">print(<span class="string">"双引号\""</span>)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 如果代码过长，反斜杠用于续行</span></div><div class="line">tmp_nb = <span class="number">1</span> + \</div><div class="line">         <span class="number">2</span> + \</div><div class="line">         <span class="number">3</span>   </div><div class="line">print(tmp_nb)</div></pre></td></tr></table></figure>
+<pre><code>换
+行
+制表    符
+反斜杠\
+单引号&apos;
+双引号&quot;
+6
+</code></pre><h2 id="23-2-字符串计算"><a href="#23-2-字符串计算" class="headerlink" title="23.2 字符串计算"></a>23.2 字符串计算</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 拼接</span></div><div class="line">print(<span class="string">"I'm "</span> + <span class="string">"Chinese!"</span>)</div><div class="line"></div><div class="line"><span class="comment"># 复制</span></div><div class="line">print(<span class="string">"逐梦"</span> * <span class="number">3</span> + <span class="string">"演艺"</span> + <span class="string">"圈"</span> * <span class="number">12</span>)</div><div class="line"></div><div class="line"><span class="comment"># 逻辑</span></div><div class="line">print(<span class="string">"老婆"</span> <span class="keyword">not</span> <span class="keyword">in</span> <span class="string">"老婆饼"</span>)</div><div class="line">print(<span class="string">"人民"</span> <span class="keyword">in</span> <span class="string">"人民大会堂"</span>)</div></pre></td></tr></table></figure>
+<pre><code>I&apos;m Chinese!
+逐梦逐梦逐梦演艺圈圈圈圈圈圈圈圈圈圈圈圈
+False
+True
+</code></pre><h2 id="23-3-格式化"><a href="#23-3-格式化" class="headerlink" title="23.3 格式化"></a>23.3 格式化</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># %格式化</span></div><div class="line">print(<span class="string">"%d岁，%s"</span> % (<span class="number">24</span>, <span class="string">"学生"</span>) )</div><div class="line">print(<span class="string">"Pi的小数点前5位是%.5f"</span> % <span class="number">3.1415926535898</span>)</div><div class="line">print(<span class="string">"他的生日是%d\\%02d\\%02d"</span> % (<span class="number">1921</span>, <span class="number">7</span>, <span class="number">1</span>))</div><div class="line"></div><div class="line"><span class="comment"># .format()格式化</span></div><div class="line">print(<span class="string">"\n&#123;&#125;岁，&#123;&#125;"</span>.format(<span class="number">24</span>, <span class="string">"学生"</span>) )</div><div class="line">print(<span class="string">"Pi的小数点前5位是&#123;:.5f&#125;"</span>.format(<span class="number">3.1415926535898</span>))</div><div class="line">print(<span class="string">"他的生日是&#123;&#125;\\&#123;:02d&#125;\\&#123;:02d&#125;"</span>.format(<span class="number">1921</span>, <span class="number">7</span>, <span class="number">1</span>))</div><div class="line"></div><div class="line"><span class="comment"># 参数顺序</span></div><div class="line">print(<span class="string">"\n如果&#123;0&#125;追到&#123;2&#125;，我就和你嘿嘿嘿"</span>.format(<span class="string">"你"</span>, <span class="string">"我"</span>,<span class="string">"他"</span>))</div><div class="line"></div><div class="line"><span class="comment"># 对齐</span></div><div class="line">print(<span class="string">"&#123;:^16&#125;"</span>.format(<span class="string">"嘿嘿嘿"</span>))<span class="comment">#后面的数字表示位置</span></div><div class="line">print(<span class="string">"&#123;:&lt;16&#125;"</span>.format(<span class="string">"嘿嘿嘿"</span>))</div><div class="line">print(<span class="string">"&#123;:&gt;16&#125;"</span>.format(<span class="string">"嘿嘿嘿"</span>))</div></pre></td></tr></table></figure>
+<pre><code>24岁，学生
+Pi的小数点前5位是3.14159
+他的生日是1921\07\01
+
+24岁，学生
+Pi的小数点前5位是3.14159
+他的生日是1921\07\01
+
+如果你追到他，我就和你嘿嘿嘿
+      嘿嘿嘿       
+嘿嘿嘿             
+             嘿嘿嘿
+</code></pre><h2 id="24-类型转换"><a href="#24-类型转换" class="headerlink" title="24.类型转换"></a>24.类型转换</h2><h2 id="24-1-字符串-lt-–-gt-列表"><a href="#24-1-字符串-lt-–-gt-列表" class="headerlink" title="24.1 字符串 &lt;–&gt; 列表"></a>24.1 字符串 &lt;–&gt; 列表</h2><p>.split(): 以参数为分隔符，字符串生成列表 </p>
+<p>.join(): 以参数为分隔符，列表生成字符串</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">phrase_str = <span class="string">"风 评 被 害"</span></div><div class="line"></div><div class="line">phrase_lst = phrase_str.split(<span class="string">' '</span>)</div><div class="line">print(<span class="string">'.split() -&gt; '</span>, phrase_lst)</div><div class="line"></div><div class="line">print(<span class="string">'.join() -&gt; '</span>, <span class="string">' '</span>.join(phrase_lst))</div></pre></td></tr></table></figure>
+<pre><code>.split() -&gt;  [&apos;风&apos;, &apos;评&apos;, &apos;被&apos;, &apos;害&apos;]
+.join() -&gt;  风 评 被 害
+</code></pre><h2 id="24-2-去除空格"><a href="#24-2-去除空格" class="headerlink" title="24.2 去除空格"></a>24.2 去除空格</h2><p>.strip(): 去掉所有空格 </p>
+<p>.lstrip(): 去掉左侧空格（直至第一个非空格字符） </p>
+<p>.rstrip(): 去掉右侧空格（从最后一个非空个字符起）</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">phrase = <span class="string">'    乖 乖 站 好    '</span></div><div class="line"></div><div class="line">print(<span class="string">'strip() -&gt; :'</span>, phrase.strip())</div><div class="line">print(<span class="string">'lstrip() -&gt; :'</span>, phrase.lstrip())</div><div class="line">print(<span class="string">'rstrip() -&gt; :'</span>, phrase.rstrip())</div></pre></td></tr></table></figure>
+<pre><code>strip() -&gt; : 乖 乖 站 好
+lstrip() -&gt; : 乖 乖 站 好
+rstrip() -&gt; :     乖 乖 站 好
+</code></pre><h2 id="练习：摩尔斯电码"><a href="#练习：摩尔斯电码" class="headerlink" title="练习：摩尔斯电码"></a>练习：摩尔斯电码</h2><p>你是一个黑客，现在需要一点启动资金，因此参与了非法交♂易，正当此时你收到了一段摩尔斯电码，请尽快解码以决定是否终止交易。</p>
+<p>摩尔斯电码的解码手册已经存在字典morse_decode中，morse_decode[‘.-‘] = ‘a’, morse_decode[‘.’] = ‘e’, morse_decode[‘…—…’]：’SOS’<br>词之间的空格，去除两端空格</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">morse_decode = &#123;<span class="string">'.-'</span>: <span class="string">'a'</span>, <span class="string">'-...'</span>: <span class="string">'b'</span>, <span class="string">'-.-.'</span>: <span class="string">'c'</span>, <span class="string">'-..'</span>: <span class="string">'d'</span>, <span class="string">'.'</span>: <span class="string">'e'</span>, <span class="string">'..-.'</span>: <span class="string">'f'</span>, <span class="string">'--.'</span>: <span class="string">'g'</span>, <span class="string">'....'</span>: <span class="string">'h'</span>, <span class="string">'..'</span>: <span class="string">'i'</span>, <span class="string">'.---'</span>: <span class="string">'j'</span>, <span class="string">'-.-'</span>: <span class="string">'k'</span>, <span class="string">'.-..'</span>: <span class="string">'l'</span>, <span class="string">'--'</span>: <span class="string">'m'</span>, <span class="string">'-.'</span>: <span class="string">'n'</span>, <span class="string">'---'</span>: <span class="string">'o'</span>, <span class="string">'.--.'</span>: <span class="string">'p'</span>, <span class="string">'--.-'</span>: <span class="string">'q'</span>, <span class="string">'.-.'</span>: <span class="string">'r'</span>, <span class="string">'...'</span>: <span class="string">'s'</span>, <span class="string">'-'</span>: <span class="string">'t'</span>, <span class="string">'..-'</span>: <span class="string">'u'</span>, <span class="string">'...-'</span>: <span class="string">'v'</span>, <span class="string">'.--'</span>: <span class="string">'w'</span>, <span class="string">'-..-'</span>: <span class="string">'x'</span>, <span class="string">'-.--'</span>: <span class="string">'y'</span>, <span class="string">'--..'</span>: <span class="string">'z'</span>, <span class="string">'-----'</span>: <span class="string">'0'</span>, <span class="string">'.----'</span>: <span class="string">'1'</span>, <span class="string">'..---'</span>: <span class="string">'2'</span>, <span class="string">'...--'</span>: <span class="string">'3'</span>, <span class="string">'....-'</span>: <span class="string">'4'</span>, <span class="string">'.....'</span>: <span class="string">'5'</span>, <span class="string">'-....'</span>: <span class="string">'6'</span>, <span class="string">'--...'</span>: <span class="string">'7'</span>, <span class="string">'---..'</span>: <span class="string">'8'</span>, <span class="string">'----.'</span>: <span class="string">'9'</span>, <span class="string">'...---...'</span>: <span class="string">'SOS'</span>&#125;</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">decode_morse</span><span class="params">(input_str)</span>:</span></div><div class="line"></div><div class="line">    output_str = <span class="string">''</span>;</div><div class="line">    input_lst = input_str.lstrip().rstrip().split(<span class="string">' '</span>);</div><div class="line">    <span class="comment"># &gt;&gt;&gt;&gt; show me the code &lt;&lt;&lt;&lt;</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,len(input_lst)):</div><div class="line">        <span class="keyword">if</span> input_lst[i] == <span class="string">''</span>:</div><div class="line">            <span class="keyword">if</span> input_lst[i<span class="number">-1</span>] != <span class="string">''</span>:<span class="comment">#不要这个操作才能通过，(lll￢ω￢)</span></div><div class="line">                output_str += <span class="string">' '</span>;</div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            output_str += morse_decode[input_lst[i]];</div><div class="line">    <span class="keyword">return</span> output_str</div><div class="line"></div><div class="line">    <span class="comment"># &gt;&gt;&gt;&gt; show me the code &lt;&lt;&lt;&lt;</span></div><div class="line"></div><div class="line">print(decode_morse(<span class="string">'      - .... .   --.- ..- .. -.-. -.-   -... .-. --- .-- -.   ..-. --- -..-   .--- ..- -- .--. ...   --- ...- . .-.   - .... .   .-.. .- --.. -.--   -.. --- --.      '</span>))</div></pre></td></tr></table></figure>
+<pre><code>the quick brown fox jumps over the lazy dog
+</code></pre><p>网站的做法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">decode_morse</span><span class="params">(input_phrase)</span>:</span></div><div class="line"></div><div class="line">    input_phrase = input_phrase.split(<span class="string">' '</span>)</div><div class="line"></div><div class="line">    print(input_phrase)</div><div class="line"></div><div class="line">    output_phrase = <span class="string">''</span></div><div class="line"></div><div class="line"></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> input_phrase:</div><div class="line">        <span class="keyword">if</span> i == <span class="string">''</span>:</div><div class="line">            output_phrase += <span class="string">' '</span></div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            output_phrase += morse_decode[i]</div><div class="line"></div><div class="line">    <span class="keyword">return</span> output_phrase.lstrip().rstrip()</div></pre></td></tr></table></figure>
+<h2 id="练习：经纬度转换"><a href="#练习：经纬度转换" class="headerlink" title="练习：经纬度转换"></a>练习：经纬度转换</h2><p>你获得了弹道导弹和侦查卫星的控制权，但两套系统来自不同国家，有不同的数据格式，为了实现制霸全球的梦想，你需要编写一个程序来进行数据格式转换。</p>
+<p>来自侦查卫星的数据：’35.03299485527936’, ‘33.233755230903625’</p>
+<p>弹道导弹的输入数据：(‘035<em>01\’58.781”N’, ‘033</em>14\’01.519”E’)</p>
+<p>度(degree,* -分(minute, ‘)-秒(second, “)的进制是60,注意数位即使不足，也需要用0填充</p>
+<p>请完成函数convert_to_dms()的定义，发射弹道导弹。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">convert_to_dms</span><span class="params">(dd_lat, dd_lon)</span>:</span></div><div class="line"></div><div class="line">    <span class="comment"># &gt;&gt;&gt;&gt; show me the code &lt;&lt;&lt;&lt;</span></div><div class="line">    dd_lat = float(dd_lat);</div><div class="line">    dd_lon = float(dd_lon);</div><div class="line">    <span class="keyword">if</span> int(dd_lat) &gt;= <span class="number">0</span>:</div><div class="line">        chr_lat = <span class="string">"N"</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        chr_lat = <span class="string">"S"</span></div><div class="line">        dd_lat = -dd_lat</div><div class="line"></div><div class="line">    <span class="keyword">if</span> int(dd_lon) &gt;= <span class="number">0</span>:</div><div class="line">        chr_lon = <span class="string">"E"</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        chr_lon = <span class="string">"W"</span></div><div class="line">        dd_lon = -dd_lon</div><div class="line">        </div><div class="line">    dms_lat = <span class="string">"&#123;:03.0f&#125;*&#123;:02.0f&#125;\'&#123;:2.3f&#125;\"&#123;&#125;"</span>.format(dd_lat//<span class="number">1</span>,dd_lat%<span class="number">1</span>*<span class="number">60</span>//<span class="number">1</span>,dd_lat%<span class="number">1</span>*<span class="number">60</span>%<span class="number">1</span>*<span class="number">60</span>,chr_lat);</div><div class="line">    dms_lon = <span class="string">"&#123;:03.0f&#125;*&#123;:02.0f&#125;\'&#123;:2.3f&#125;\"&#123;&#125;"</span>.format(dd_lon//<span class="number">1</span>,dd_lon%<span class="number">1</span>*<span class="number">60</span>//<span class="number">1</span>,dd_lon%<span class="number">1</span>*<span class="number">60</span>%<span class="number">1</span>*<span class="number">60</span>,chr_lon);</div><div class="line">    <span class="comment"># &gt;&gt;&gt;&gt; show me the code &lt;&lt;&lt;&lt;</span></div><div class="line"></div><div class="line">    <span class="keyword">return</span> dms_lat, dms_lon</div><div class="line"></div><div class="line">print(convert_to_dms(<span class="string">'35.03299485527936'</span>, <span class="string">'33.233755230903625'</span>))</div><div class="line">print(convert_to_dms(<span class="string">'-37.111415669561595'</span>, <span class="string">'-12.284317023586482'</span>))</div></pre></td></tr></table></figure>
+<pre><code>(&apos;035*01\&apos;58.781&quot;N&apos;, &apos;033*14\&apos;1.519&quot;E&apos;)
+(&apos;037*06\&apos;41.096&quot;S&apos;, &apos;012*17\&apos;3.541&quot;W&apos;)
+</code></pre><p>网站的做法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">convert_to_dms</span><span class="params">(dd_lat, dd_lon)</span>:</span></div><div class="line"></div><div class="line">    dd_lat = float(dd_lat)</div><div class="line">    dd_lon = float(dd_lon)</div><div class="line"></div><div class="line"></div><div class="line">    <span class="keyword">if</span> int(dd_lat) &gt;= <span class="number">0</span>:</div><div class="line">        dir_lat = <span class="string">"N"</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        dir_lat = <span class="string">"S"</span></div><div class="line">        dd_lat = -dd_lat</div><div class="line"></div><div class="line">    <span class="keyword">if</span> int(dd_lon) &gt;= <span class="number">0</span>:</div><div class="line">        dir_lon = <span class="string">"E"</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        dir_lon = <span class="string">"W"</span></div><div class="line">        dd_lon = -dd_lon</div><div class="line"></div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">convert60</span><span class="params">(x)</span>:</span></div><div class="line">        <span class="keyword">return</span> <span class="number">60</span> * (float(x) - int(x))</div><div class="line"></div><div class="line">    ddd_lat = <span class="string">'%03d'</span> % int(dd_lat)</div><div class="line">    mm_lat = <span class="string">'%02d'</span> % int(convert60(dd_lat))</div><div class="line">    ss_lat = (<span class="string">'%.3f'</span> % convert60(convert60(dd_lat))).zfill(<span class="number">6</span>)</div><div class="line"></div><div class="line">    dms_lat = ddd_lat + <span class="string">"*"</span> + mm_lat + <span class="string">"'"</span> + ss_lat + <span class="string">'"'</span> + dir_lat</div><div class="line"></div><div class="line"></div><div class="line">    ddd_lon = <span class="string">'%03d'</span> % int(dd_lon)</div><div class="line">    mm_lon = <span class="string">'%02d'</span> % int(<span class="number">60</span> * (dd_lon - int(dd_lon)))</div><div class="line">    ss_lon = (<span class="string">'%.3f'</span> % (<span class="number">60</span> * (<span class="number">60</span> * (dd_lon - int(dd_lon)) - int(mm_lon)))).zfill(<span class="number">6</span>)</div><div class="line"></div><div class="line">    dms_lon = ddd_lon + <span class="string">"*"</span> + mm_lon + <span class="string">"'"</span> + ss_lon + <span class="string">'"'</span> + dir_lon</div><div class="line"></div><div class="line">    <span class="keyword">return</span> dms_lat, dms_lon</div><div class="line"></div><div class="line">print(convert_to_dms(<span class="string">'35.03299485527936'</span>, <span class="string">'33.233755230903625'</span>))</div><div class="line">print(convert_to_dms(<span class="string">'-37.111415669561595'</span>, <span class="string">'-12.284317023586482'</span>))</div></pre></td></tr></table></figure>
+<pre><code>(&apos;035*01\&apos;58.781&quot;N&apos;, &apos;033*14\&apos;01.519&quot;E&apos;)
+(&apos;037*06\&apos;41.096&quot;S&apos;, &apos;012*17\&apos;03.541&quot;W&apos;)
+</code></pre><h1 id="25-元组"><a href="#25-元组" class="headerlink" title="25.元组"></a>25.元组</h1><p>tuple与列表(list)很相似，但是不可变，也就是可散列(hashable)。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 空元组</span></div><div class="line">empty_tuple = tuple()</div><div class="line">print(empty_tuple)</div><div class="line"></div><div class="line"><span class="comment"># 新建元组</span></div><div class="line">nb_tuple = (<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>)</div><div class="line"></div><div class="line"><span class="comment"># 访问元素</span></div><div class="line">print(nb_tuple[<span class="number">3</span>])</div><div class="line"></div><div class="line"><span class="comment"># 修改元素</span></div><div class="line">nb_tuple[<span class="number">3</span>] = <span class="number">4</span></div></pre></td></tr></table></figure>
+<p>虽然元组经常出现在括号()中，但括号其实并非必须，真正决定性的是逗号,。列表如果剥了壳[]，就变成了元组。Quiz 16中convert_to_dms()的返回值：return dms_lat, dms_lon返回的实际上就一个元组。元组经常作为函数返回值出现，这在NumPy, TensorFlow等数值计算工具库中尤为常见。</p>
+<h2 id="25-2-元组赋值"><a href="#25-2-元组赋值" class="headerlink" title="25.2 元组赋值"></a>25.2 元组赋值</h2><p>“交换多个变量的值”，传统做法是借助中间变量，而元组赋值的功能则可以直接实现：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">a = <span class="string">"了"</span></div><div class="line">b = <span class="string">"不"</span></div><div class="line">c = <span class="string">"得"</span></div><div class="line"></div><div class="line">b, c, a = a, b, c</div><div class="line">print(b, c, a)</div></pre></td></tr></table></figure>
+<pre><code>了 不 得
+</code></pre><h2 id="25-3-元组与序列"><a href="#25-3-元组与序列" class="headerlink" title="25.3 元组与序列"></a>25.3 元组与序列</h2><p>zip()函数接收两个或多个序列，并联到一起，就像拉链一样。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">string0 = <span class="string">'子丑寅卯辰巳午未戊己庚辛'</span></div><div class="line">string1 = <span class="string">'鼠牛虎兔龙蛇马羊猴鸡狗猪'</span></div><div class="line">nb_lst = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>]</div><div class="line"></div><div class="line"><span class="keyword">for</span> pair <span class="keyword">in</span> zip(nb_lst, string0, string1):</div><div class="line">    print(pair)</div></pre></td></tr></table></figure>
+<pre><code>(0, &apos;子&apos;, &apos;鼠&apos;)
+(1, &apos;丑&apos;, &apos;牛&apos;)
+(2, &apos;寅&apos;, &apos;虎&apos;)
+(3, &apos;卯&apos;, &apos;兔&apos;)
+(4, &apos;辰&apos;, &apos;龙&apos;)
+(5, &apos;巳&apos;, &apos;蛇&apos;)
+(6, &apos;午&apos;, &apos;马&apos;)
+(7, &apos;未&apos;, &apos;羊&apos;)
+(8, &apos;戊&apos;, &apos;猴&apos;)
+(9, &apos;己&apos;, &apos;鸡&apos;)
+(10, &apos;庚&apos;, &apos;狗&apos;)
+(11, &apos;辛&apos;, &apos;猪&apos;)
+</code></pre><h2 id="25-4-元组与字典"><a href="#25-4-元组与字典" class="headerlink" title="25.4 元组与字典"></a>25.4 元组与字典</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 字典 -&gt; 元组</span></div><div class="line">sanguo_dct = &#123;<span class="number">1</span>:<span class="string">"吕"</span>, <span class="number">2</span>:<span class="string">"赵"</span>, <span class="number">3</span>:<span class="string">"典韦"</span>, <span class="number">4</span>:<span class="string">"关"</span>, <span class="number">5</span>:<span class="string">"马"</span>, <span class="number">6</span>:<span class="string">"张飞"</span>&#125;</div><div class="line"></div><div class="line">sanguo_tuples = sanguo_dct.items()</div><div class="line">print(sanguo_tuples)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 元组 -&gt; 字典</span></div><div class="line">print(<span class="string">'\n'</span>, dict(sanguo_tuples))</div></pre></td></tr></table></figure>
+<pre><code>dict_items([(1, &apos;吕&apos;), (2, &apos;赵&apos;), (3, &apos;典韦&apos;), (4, &apos;关&apos;), (5, &apos;马&apos;), (6, &apos;张飞&apos;)])
+
+ {1: &apos;吕&apos;, 2: &apos;赵&apos;, 3: &apos;典韦&apos;, 4: &apos;关&apos;, 5: &apos;马&apos;, 6: &apos;张飞&apos;}
+</code></pre><h2 id="练习-DNA碱基对"><a href="#练习-DNA碱基对" class="headerlink" title="练习: DNA碱基对"></a>练习: DNA碱基对</h2><p>你利用卫星和弹道导弹完成了全球同步爆破，现在地球已经完犊子了，你需要创造新的生命，以保证21世纪是生物的世纪。</p>
+<p>DNA碱基成对存在，其中”A”和”T”配对， “G”和”C”配对。</p>
+<p>完成函数dna_strand()的定义，接收一条DNA，返回另一条。</p>
+<p>例如：dna_strand(“GTAT”) -&gt; “CATA”</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">dna_strand</span><span class="params">(dna)</span>:</span></div><div class="line">    dna_dict = &#123;<span class="string">'A'</span>:<span class="string">"T"</span>,<span class="string">'G'</span>:<span class="string">"C"</span>,<span class="string">'T'</span>:<span class="string">"A"</span>,<span class="string">'C'</span>:<span class="string">"G"</span>&#125;</div><div class="line">    <span class="comment"># &gt;&gt;&gt;&gt; sheng wu da fa hao &lt;&lt;&lt;&lt;</span></div><div class="line">    indstr = <span class="string">''</span>;</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> dna:</div><div class="line">        indstr +=dna_dict[i];</div><div class="line">    <span class="keyword">return</span> indstr</div><div class="line">    <span class="comment"># &gt;&gt;&gt;&gt; sheng wu da fa hao &lt;&lt;&lt;&lt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dna_strand(<span class="string">"GTAT"</span>)</div></pre></td></tr></table></figure>
+<pre><code>&apos;CATA&apos;
+</code></pre>
       
 
       
@@ -170,6 +259,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -181,6 +281,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2018/07/24/负基础入门Python_9/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          负基础入门Python教程_9
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/24/负基础入门Python_7/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">负基础入门Python教程_7</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -199,6 +318,16 @@
 </aside>
 
 
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -221,7 +350,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

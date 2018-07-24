@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tagcloud | PORTB</title>
+  <title>负基础入门Python教程_7 | PORTB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="网页描述在哪">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Tagcloud">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+  <meta name="description" content="20.字符串（String）在python中，单双引号是一样的 12print(&quot;hello world!&quot;)print(&apos;hello world!&apos;) hello world! hello world! 可以像访问列表一样访问字符串中的字符。 1234567name = &quot;Diablo&quot;# 头文字Dtouwenzi = name[0]mowenzi = name[-1]print(&apos;头文字&apos;,t">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="负基础入门Python教程_7">
+<meta property="og:url" content="http://yoursite.com/2018/07/24/负基础入门Python_7/index.html">
 <meta property="og:site_name" content="PORTB">
-<meta property="og:description" content="网页描述在哪">
+<meta property="og:description" content="20.字符串（String）在python中，单双引号是一样的 12print(&quot;hello world!&quot;)print(&apos;hello world!&apos;) hello world! hello world! 可以像访问列表一样访问字符串中的字符。 1234567name = &quot;Diablo&quot;# 头文字Dtouwenzi = name[0]mowenzi = name[-1]print(&apos;头文字&apos;,t">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-10-31T05:49:54.686Z">
+<meta property="og:updated_time" content="2018-07-24T02:38:45.811Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tagcloud">
-<meta name="twitter:description" content="网页描述在哪">
+<meta name="twitter:title" content="负基础入门Python教程_7">
+<meta name="twitter:description" content="20.字符串（String）在python中，单双引号是一样的 12print(&quot;hello world!&quot;)print(&apos;hello world!&apos;) hello world! hello world! 可以像访问列表一样访问字符串中的字符。 1234567name = &quot;Diablo&quot;# 头文字Dtouwenzi = name[0]mowenzi = name[-1]print(&apos;头文字&apos;,t">
   
     <link rel="alternative" href="/atom.xml" title="PORTB" type="application/atom+xml">
   
@@ -142,27 +143,84 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope itemprop="blogPost">
+            <article id="post-负基础入门Python_7" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Tagcloud
+      负基础入门Python教程_7
     </h1>
   
 
         
-        <a href="/tags/index.html" class="archive-article-date">
-  	<time datetime="2017-10-31T05:37:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-31</time>
+        <a href="/2018/07/24/负基础入门Python_7/" class="archive-article-date">
+  	<time datetime="2018-07-24T02:36:16.747Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="20-字符串（String）"><a href="#20-字符串（String）" class="headerlink" title="20.字符串（String）"></a>20.字符串（String）</h2><p>在python中，单双引号是一样的</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">print(<span class="string">"hello world!"</span>)</div><div class="line">print(<span class="string">'hello world!'</span>)</div></pre></td></tr></table></figure>
+<pre><code>hello world!
+hello world!
+</code></pre><p>可以像访问列表一样访问字符串中的字符。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">name = <span class="string">"Diablo"</span></div><div class="line"></div><div class="line"><span class="comment"># 头文字D</span></div><div class="line">touwenzi = name[<span class="number">0</span>]</div><div class="line">mowenzi = name[<span class="number">-1</span>]</div><div class="line">print(<span class="string">'头文字'</span>,touwenzi)</div><div class="line">print(<span class="string">'末文字'</span>,mowenzi)</div></pre></td></tr></table></figure>
+<pre><code>头文字 D
+末文字 o
+</code></pre><p>替换列表中某一元素很容易，只需访问并赋值即可，而相同的操作对于字符串则不可行。字符串值一经生成，就不能再对其中内容进行变更，这与列表截然不同。因此字符串可散列(hashable)，可以作为字典的键(key)，而列表则不能。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">yizhao_list = [<span class="string">"传"</span>, <span class="string">"位"</span>, <span class="string">"十"</span>, <span class="string">"四"</span>, <span class="string">"阿"</span>, <span class="string">"哥"</span>]</div><div class="line">yizhao_str = <span class="string">"传位十四阿哥"</span></div><div class="line"></div><div class="line">yizhao_list[<span class="number">2</span>] = <span class="string">"于"</span></div><div class="line">print(<span class="string">"yizhao_list =&gt; "</span>, yizhao_list)</div><div class="line"></div><div class="line"></div><div class="line">yizhao_str[<span class="number">2</span>] = <span class="string">"于"</span></div><div class="line">print(<span class="string">"yizhao_str =&gt; "</span>, yizhao_str)</div></pre></td></tr></table></figure>
+<pre><code>yizhao_list =&gt;  [&apos;传&apos;, &apos;位&apos;, &apos;于&apos;, &apos;四&apos;, &apos;阿&apos;, &apos;哥&apos;]
+
+
+
+---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+&lt;ipython-input-1-1a012fa3bb2a&gt; in &lt;module&gt;()
+      6 
+      7 
+----&gt; 8 yizhao_str[2] = &quot;于&quot;
+      9 print(&quot;yizhao_str =&gt; &quot;, yizhao_str)
+
+
+TypeError: &apos;str&apos; object does not support item assignment
+</code></pre><p>字符串不可变更，如果想达到修改的效果，只能生成一个新的。与列表一样，字符串可以进行循环遍历，迭代的单位是字符。</p>
+<p>想办法传位于四阿哥，字符串没有.append()方法，用加号+就可以拼接</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">yizhao_str = <span class="string">"传位十四阿哥"</span></div><div class="line"></div><div class="line">new_yizhao_str = <span class="string">''</span></div><div class="line"></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> yizhao_str:</div><div class="line">    <span class="keyword">if</span> i != <span class="string">'十'</span>:</div><div class="line">        new_yizhao_str += i;</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        new_yizhao_str += <span class="string">'于'</span>;</div></pre></td></tr></table></figure>
+<h2 id="21-字符串常用函数"><a href="#21-字符串常用函数" class="headerlink" title="21.字符串常用函数"></a>21.字符串常用函数</h2><p>len() 返回字符串长度（即字符个数），除了汉字、字母，标点符号也算字符。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">len(<span class="string">"Hello, world!"</span>)</div></pre></td></tr></table></figure>
+<pre><code>13
+</code></pre><p>replace() 替换字符串中的相应字符，接收两个参数，分别是原字符与目标字符。输出并不会修改原来的值。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">yizhao_str = <span class="string">"传位十四阿哥"</span></div><div class="line">yizhao_str.replace(<span class="string">"十"</span>, <span class="string">"于"</span>)</div><div class="line"></div><div class="line">print(yizhao_str)</div><div class="line">print(yizhao_str.replace(<span class="string">"十"</span>, <span class="string">"于"</span>))</div></pre></td></tr></table></figure>
+<pre><code>传位十四阿哥
+传位于四阿哥
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">dna2rna</span><span class="params">(dna)</span>:</span></div><div class="line">    <span class="keyword">return</span> dna.replace(<span class="string">'T'</span>,<span class="string">'U'</span>);</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dna2rna(<span class="string">"GACCGCCGTC"</span>)</div></pre></td></tr></table></figure>
+<pre><code>&apos;GACCGCCGUC&apos;
+</code></pre><p>.lower()/.upper() 将英文字符转换为小写/大写</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">print(<span class="string">"HHHHH"</span>.lower())</div><div class="line">print(<span class="string">"hhhhh"</span>.upper())</div></pre></td></tr></table></figure>
+<pre><code>hhhhh
+HHHHH
+</code></pre><p>.count()统计字符串中参数字符出现的次数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="string">"banana"</span>.count(<span class="string">"a"</span>)</div></pre></td></tr></table></figure>
+<pre><code>3
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">char_count</span><span class="params">(str)</span>:</span></div><div class="line">    dic = &#123;<span class="string">'a'</span>:str.count(<span class="string">'a'</span>)&#125;;</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>,<span class="number">25</span>):</div><div class="line">        <span class="keyword">if</span> str.count(chr(i + ord(<span class="string">'a'</span>))) != <span class="number">0</span>:</div><div class="line">            dic[chr(i + ord(<span class="string">'a'</span>))] = str.count(chr(i + ord(<span class="string">'a'</span>)));</div><div class="line">    <span class="keyword">return</span> dic;</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">char_count(<span class="string">'banana'</span>)</div></pre></td></tr></table></figure>
+<pre><code>{&apos;a&apos;: 3, &apos;b&apos;: 1, &apos;n&apos;: 2}
+</code></pre><p>Ps.上面用到的这个ASCII码是这样用的</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">print(ord(<span class="string">"a"</span>))</div><div class="line">print(chr(<span class="number">97</span>))</div></pre></td></tr></table></figure>
+<pre><code>97
+a
+</code></pre><p>凯撒密表:将字符串中的字符向后加shift位，字符串中只有字母和空格，只考虑小写的情况。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">caesar_cipher</span><span class="params">(phrase, shift)</span>:</span></div><div class="line"></div><div class="line">    input_phrase = phrase.lower()</div><div class="line">    output_phrase = <span class="string">''</span></div><div class="line"></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> input_phrase:</div><div class="line">        <span class="keyword">if</span> i != <span class="string">' '</span>:</div><div class="line">            i = chr((ord(i) + shift - ord(<span class="string">'a'</span>))% <span class="number">26</span> + ord(<span class="string">'a'</span>));</div><div class="line">        output_phrase += i;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> output_phrase</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">caesar_cipher(<span class="string">'A'</span>,<span class="number">3</span>)</div></pre></td></tr></table></figure>
+<pre><code>&apos;d&apos;
+</code></pre>
       
 
       
@@ -170,6 +228,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -181,6 +250,25 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2018/07/24/负基础入门Python_8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          负基础入门Python教程_8
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/24/负基础入门Python_6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">负基础入门Python教程_6</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -199,6 +287,16 @@
 </aside>
 
 
+
+  
+  
+  
+
+  
+
+  
+
+  
 
 
           </div>
@@ -221,7 +319,7 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
