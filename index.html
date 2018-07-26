@@ -143,64 +143,62 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-负基础入门Python_5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-负基础入门Python_4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/24/负基础入门Python_5/">负基础入门Python教程_5</a>
+      <a class="article-title" href="/2018/07/24/负基础入门Python_4/">负基础入门Python教程_4</a>
     </h1>
   
 
         
-        <a href="/2018/07/24/负基础入门Python_5/" class="archive-article-date">
-  	<time datetime="2018-07-24T02:36:01.562Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-24</time>
+        <a href="/2018/07/24/负基础入门Python_4/" class="archive-article-date">
+  	<time datetime="2018-07-24T02:35:53.603Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="13-查找"><a href="#13-查找" class="headerlink" title="13.查找"></a>13.查找</h2><h3 id="练习：二分查找"><a href="#练习：二分查找" class="headerlink" title="练习：二分查找"></a>练习：二分查找</h3><p>有序数列找数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">binary_search</span><span class="params">(lst, item)</span>:</span></div><div class="line"></div><div class="line">    <span class="comment"># 下界索引</span></div><div class="line">    low = <span class="number">0</span></div><div class="line">    <span class="comment"># 上界索引</span></div><div class="line">    high = len(lst) - <span class="number">1</span></div><div class="line"></div><div class="line">    <span class="keyword">while</span> low &lt;= high:</div><div class="line">        <span class="comment"># 中值</span></div><div class="line">        mid = (low + high) // <span class="number">2</span></div><div class="line">        <span class="comment"># 猜测结果</span></div><div class="line">        guess = lst[mid]</div><div class="line"></div><div class="line">        <span class="comment"># 猜中</span></div><div class="line">        <span class="keyword">if</span> guess == item:</div><div class="line">            <span class="keyword">return</span> mid</div><div class="line">        <span class="comment"># 偏大</span></div><div class="line">        <span class="keyword">if</span> guess &gt; item:</div><div class="line">            high = mid - <span class="number">1</span></div><div class="line">        <span class="comment"># 偏小</span></div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            low = mid + <span class="number">1</span></div><div class="line"></div><div class="line">    <span class="comment"># 查找不到</span></div><div class="line">    <span class="keyword">return</span> <span class="keyword">None</span></div><div class="line"></div><div class="line">print(binary_search([<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">13</span>], <span class="number">9</span>))</div></pre></td></tr></table></figure>
-<pre><code>None
-</code></pre><h3 id="13-1-内置的查找方法"><a href="#13-1-内置的查找方法" class="headerlink" title="13.1 内置的查找方法"></a>13.1 内置的查找方法</h3><p>.index()#返回索引</p>
-<p>.count()#计数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">lst = [<span class="number">3</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">6</span>]</div><div class="line"></div><div class="line">lst.index(<span class="number">9</span>)    <span class="comment"># 5</span></div><div class="line">lst.count(<span class="number">1</span>)    <span class="comment"># 2</span></div></pre></td></tr></table></figure>
-<pre><code>2
-</code></pre><h3 id="练习："><a href="#练习：" class="headerlink" title="练习："></a>练习：</h3><p>如果宋江是第1把交椅，则花荣的座次是多少？将结果赋值给变量xiaoliguang</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">hans = [<span class="string">"宋江"</span>, <span class="string">"卢俊义"</span>, <span class="string">"吴用"</span>, <span class="string">"公孙胜"</span>, <span class="string">"关胜"</span>, <span class="string">"林冲"</span>, <span class="string">"秦明"</span>, <span class="string">"呼延灼"</span>, <span class="string">"花荣"</span>]</div><div class="line"></div><div class="line"><span class="comment"># &gt;&gt;&gt;&gt; show me the code &lt;&lt;&lt;&lt;</span></div><div class="line"></div><div class="line">xiaoliguang = hans.index(<span class="string">"花荣"</span>) + <span class="number">1</span></div><div class="line">xiaoliguang</div><div class="line"><span class="comment"># &gt;&gt;&gt;&gt; show me the code &lt;&lt;&lt;&lt;</span></div></pre></td></tr></table></figure>
-<pre><code>9
-</code></pre><h3 id="13-2-内置查找关键字"><a href="#13-2-内置查找关键字" class="headerlink" title="13.2 内置查找关键字"></a>13.2 内置查找关键字</h3><p>in #返回值为Ture or False</p>
-<p>not in</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">primes = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">13</span>, <span class="number">17</span>, <span class="number">19</span>]</div><div class="line"></div><div class="line">print(<span class="string">"9 in primes =&gt; "</span>, <span class="number">9</span> <span class="keyword">in</span> primes)</div><div class="line">print(<span class="string">"9 not in primes =&gt; "</span>, <span class="number">9</span> <span class="keyword">not</span> <span class="keyword">in</span> primes)</div></pre></td></tr></table></figure>
-<pre><code>9 in primes =&gt;  False
-9 not in primes =&gt;  True
-</code></pre><h2 id="14-排序"><a href="#14-排序" class="headerlink" title="14.排序"></a>14.排序</h2><p>“二分法”只适用于已经按顺序排好的列表，尝试用相同方法在无序列表中进行查找：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">binary_search</span><span class="params">(lst, item)</span>:</span></div><div class="line"></div><div class="line">    low = <span class="number">0</span></div><div class="line">    high = len(lst) - <span class="number">1</span></div><div class="line"></div><div class="line">    <span class="keyword">while</span> low &lt;= high:</div><div class="line">        mid = (low + high) // <span class="number">2</span></div><div class="line">        guess = lst[mid]</div><div class="line"></div><div class="line">        <span class="keyword">if</span> guess == item:</div><div class="line">            <span class="keyword">return</span> mid</div><div class="line">        <span class="keyword">if</span> guess &gt; item:</div><div class="line">            high = mid - <span class="number">1</span></div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            low = mid + <span class="number">1</span></div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="keyword">None</span></div><div class="line"></div><div class="line">print(binary_search([<span class="number">3</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">6</span>], <span class="number">4</span>))</div></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</div><div class="line">a[<span class="number">-1</span>]</div></pre></td></tr></table></figure>
-<pre><code>5
-</code></pre><h2 id="14-1选择排序"><a href="#14-1选择排序" class="headerlink" title="14.1选择排序"></a>14.1选择排序</h2><p>挑最小的放到最前面</p>
-<p>故任务分成两个部分：一个挑最小，一个放</p>
-<p>一个返回列表最小值索引的函数find_smallest()已经定义，请补充函数selection_sort()的定义，使其完成选择排序：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_smallest</span><span class="params">(lst)</span>:</span></div><div class="line">    <span class="comment"># 先假设列表第0元素为最小</span></div><div class="line">    smallest = lst[<span class="number">0</span>]</div><div class="line">    smallest_index = <span class="number">0</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, len(lst)):</div><div class="line">        <span class="comment"># 如果比当前的“最小”还小</span></div><div class="line">        <span class="keyword">if</span> lst[i] &lt; smallest:</div><div class="line">            <span class="comment"># 替换当前的“最小”</span></div><div class="line">            smallest = lst[i]</div><div class="line">            smallest_index = i</div><div class="line">    <span class="comment"># 返回最小值的索引</span></div><div class="line">    <span class="keyword">return</span> smallest_index</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">selection_sort</span><span class="params">(lst)</span>:</span></div><div class="line"></div><div class="line">    new_lst = []</div><div class="line">    <span class="keyword">while</span> len(lst)&gt;<span class="number">0</span>:</div><div class="line">        new_lst.append(lst[find_smallest(lst)]);</div><div class="line">        lst.remove(new_lst[<span class="number">-1</span>]);</div><div class="line">    <span class="keyword">return</span> new_lst</div></pre></td></tr></table></figure>
-<h2 id="14-2-快速排序"><a href="#14-2-快速排序" class="headerlink" title="14.2 快速排序"></a>14.2 快速排序</h2><p>快速排序就是挑一个（任意）比它大放右边，否则放左边，然后左边右边分别递归。</p>
-<h3 id="复习递归"><a href="#复习递归" class="headerlink" title="复习递归"></a>复习递归</h3><p>计算阶乘</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fact</span><span class="params">(n)</span>:</span></div><div class="line">    <span class="keyword">if</span> n == <span class="number">0</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">return</span> n*fact(n<span class="number">-1</span>);</div></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fact(<span class="number">5</span>)</div></pre></td></tr></table></figure>
-<pre><code>120
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span><span class="params">(lst)</span>:</span></div><div class="line"></div><div class="line">    <span class="comment"># 递归终点：未排序列表的长度减至1（就剩一个数，不用再排了）</span></div><div class="line">    <span class="keyword">if</span> len(lst) &lt;= <span class="number">1</span>:</div><div class="line">        <span class="keyword">return</span> lst</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="comment"># 假设列表的第0元素为pivot</span></div><div class="line">        pivot = lst[<span class="number">0</span>]</div><div class="line">        <span class="comment"># 列表推导式：对小于/大于pivot的元素，分别组成两个新列表</span></div><div class="line">        less = [i <span class="keyword">for</span> i <span class="keyword">in</span> lst[<span class="number">1</span>:] <span class="keyword">if</span> i &lt;= pivot]</div><div class="line">        greater = [i <span class="keyword">for</span> i <span class="keyword">in</span> lst[<span class="number">1</span>:] <span class="keyword">if</span> i &gt; pivot]</div><div class="line">        <span class="comment"># 合并三个列表</span></div><div class="line">        <span class="keyword">return</span> quick_sort(less) + [pivot] + quick_sort(greater)</div><div class="line"></div><div class="line">print(quick_sort([<span class="number">3</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">8</span>]))</div></pre></td></tr></table></figure>
-<pre><code>[1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 8, 8, 9, 9]
-</code></pre><h3 id="14-3-内置排序函数-方法"><a href="#14-3-内置排序函数-方法" class="headerlink" title="14.3 内置排序函数/方法"></a>14.3 内置排序函数/方法</h3><p>sorted()，Python内置函数，将参数列表排序后生成一个新列表作为返回值，源列表不变。</p>
-<p>.sort()，列表方法，将列表排序，没有返回值，不保留原有无序列表。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">pi = [<span class="number">3</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">8</span>]</div><div class="line"></div><div class="line">sorted_pi = sorted(pi)</div><div class="line">print(<span class="string">"sorted(pi) = "</span>, sorted_pi)</div><div class="line">print(<span class="string">"sorted(), pi = "</span>, pi)</div><div class="line"></div><div class="line">pi_sort = pi.sort()</div><div class="line">print(<span class="string">"\npi.sort() = "</span>, pi_sort)</div><div class="line">print(<span class="string">".sort(), pi = "</span>, pi)</div></pre></td></tr></table></figure>
-<pre><code>sorted(pi) =  [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 8, 8, 9, 9]
-sorted(), pi =  [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 8]
-
-pi.sort() =  None
-.sort(), pi =  [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 8, 8, 9, 9]
+        <h2 id="10-列表常用函数与方法"><a href="#10-列表常用函数与方法" class="headerlink" title="10. 列表常用函数与方法"></a>10. 列表常用函数与方法</h2><p>sum：求和</p>
+<p>len：获取列表长度</p>
+<p>.append()：添加元素</p>
+<h3 id="练习：距平均数的偏差"><a href="#练习：距平均数的偏差" class="headerlink" title="练习：距平均数的偏差"></a>练习：距平均数的偏差</h3><p>输入参数为数值列表</p>
+<p>计算列表元素平均值（保留两位小数）</p>
+<p>计算列表元素与平均值的差</p>
+<p>返回由偏差组成的列表</p>
+<p>对参数x保留两位小数的函数：round(x,2)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">dst_avg</span><span class="params">(input_list)</span>:</span></div><div class="line">    output_list = [];</div><div class="line">    average_of_list = round(sum(input_list)/len(input_list),<span class="number">2</span>);</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> input_list:</div><div class="line">        output_list.append(i-average_of_list);</div><div class="line">    <span class="keyword">return</span> output_list</div></pre></td></tr></table></figure>
+<p>测试不通过，这就十二分尴尬了，最后看了下答案，他是下面这样写的orz，那就是在某些测试数据下先四舍五入和先作差会导致不同。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">dst_avg</span><span class="params">(input_list)</span>:</span></div><div class="line">    output_list = [];</div><div class="line">    average_of_list = sum(input_list)/len(input_list);</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> input_list:</div><div class="line">        output_list.append(round(i-average_of_list,<span class="number">2</span>));</div><div class="line">    <span class="keyword">return</span> output_list</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dst_avg([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</div></pre></td></tr></table></figure>
+<pre><code>[-2.0, -1.0, 0.0, 1.0, 2.0]
+</code></pre><h2 id="11-列表推导式"><a href="#11-列表推导式" class="headerlink" title="11.列表推导式"></a>11.列表推导式</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 找出20以内3的倍数，存入列表`multi3`</span></div><div class="line"><span class="comment"># 1&gt; 循环遍历</span></div><div class="line"></div><div class="line">multi3 = []    <span class="comment"># 新建空列表</span></div><div class="line"></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">21</span>):</div><div class="line">    <span class="keyword">if</span> i%<span class="number">3</span> == <span class="number">0</span>:</div><div class="line">        multi3.append(i)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 2&gt; 列表推导式</span></div><div class="line"></div><div class="line">[i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">21</span>) <span class="keyword">if</span> i%<span class="number">3</span> == <span class="number">0</span>]</div></pre></td></tr></table></figure>
+<pre><code>[0, 3, 6, 9, 12, 15, 18]
+</code></pre><h3 id="练习：依然是距平均数的偏差"><a href="#练习：依然是距平均数的偏差" class="headerlink" title="练习：依然是距平均数的偏差"></a>练习：依然是距平均数的偏差</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">dst_avg</span><span class="params">(input_list)</span>:</span></div><div class="line">    <span class="keyword">return</span>[round(i-sum(input_list)/len(input_list),<span class="number">2</span>) <span class="keyword">for</span> i <span class="keyword">in</span> input_list ]</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dst_avg([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</div></pre></td></tr></table></figure>
+<pre><code>[-2.0, -1.0, 0.0, 1.0, 2.0]
+</code></pre><h2 id="12-嵌套列表"><a href="#12-嵌套列表" class="headerlink" title="12.嵌套列表"></a>12.嵌套列表</h2><p>列表的元素也可以是列表，嵌套的列表可以表示高维数组。</p>
+<p>完成以下程序：</p>
+<p>获取列表coding的第0个元素，存入变量coding0</p>
+<p>获取列表coding0的第0个元素，存入变量coding00</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">coding = [[<span class="string">"Python"</span>, <span class="string">"Go"</span>, <span class="string">".NET"</span>], </div><div class="line">          [<span class="string">"Java"</span>, <span class="string">"C"</span>, <span class="string">"Scala"</span>],</div><div class="line">          [<span class="string">"Haskell"</span>, <span class="string">"PHP"</span>, <span class="string">"JavaScript"</span>]]</div><div class="line">coding0 = coding[<span class="number">0</span>]</div><div class="line">coding00 = coding0[<span class="number">0</span>]</div></pre></td></tr></table></figure>
+<h3 id="练习：街头霸王"><a href="#练习：街头霸王" class="headerlink" title="练习：街头霸王"></a>练习：街头霸王</h3><p>经典的《街头霸王》有12个人物可以选择，在没有鼠标和触摸板的年代，选择靠的是方向键，这里我们就用Python来模拟一下选人的过程。</p>
+<p>这12个待选人物以2x6矩阵的形式排列：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">fighters = [[<span class="string">"Ryu"</span>, <span class="string">"E.Honda"</span>, <span class="string">"Blanka"</span>, <span class="string">"Guile"</span>, <span class="string">"Balrog"</span>, <span class="string">"Vega"</span>],</div><div class="line">        [<span class="string">"Ken"</span>, <span class="string">"Chun Li"</span>, <span class="string">"Zangief"</span>, <span class="string">"Dhalsim"</span>, <span class="string">"Sagat"</span>, <span class="string">"M.Bison"</span>]]</div><div class="line"></div><div class="line">initial_position = (<span class="number">0</span>, <span class="number">0</span>)</div></pre></td></tr></table></figure>
+<p>可以施加的行动就是“上下左右”四种：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">moves = [<span class="string">"up"</span>,<span class="string">"down"</span>,<span class="string">"right"</span>,<span class="string">"left"</span>]</div></pre></td></tr></table></figure>
+<p>最左上角的Ryu（耗油跟）的位置是0,0, 右下角M.Bison的位置是1,5。值得注意的是边界规则：</p>
+<p>对于左右方向的移动，列表是“首尾相接”的。比如指针在Vega的时候再执行right，就会跳回Ryu。</p>
+<p>对于上下方向的移动，列表是“两端封闭”的。比如指针在Ryu的时候再执行up，光标的位置不变。</p>
+<p>请完成函数street_fighter_selection()的定义，输入参数有之前的fighters, initial_position，以及由”up”,”down”,”right”,”left”四种元素组成的移动序列。</p>
+<p>要求输出的是，在moves的作用下，光标都扫过了哪些英雄，按顺序组成一个列表。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">street_fighter_selection</span><span class="params">(fighters, initial_position, moves)</span>:</span></div><div class="line">    output_list = [];</div><div class="line">    curse = initial_position;</div><div class="line">    <span class="keyword">for</span> m <span class="keyword">in</span> moves:</div><div class="line">        <span class="keyword">if</span> m == <span class="string">"up"</span>:</div><div class="line">            move_pos = [<span class="number">-1</span>,<span class="number">0</span>];</div><div class="line">        <span class="keyword">if</span> m == <span class="string">"down"</span>:</div><div class="line">            move_pos = [<span class="number">1</span>,<span class="number">0</span>];</div><div class="line">        <span class="keyword">if</span> m == <span class="string">"right"</span>:</div><div class="line">            move_pos = [<span class="number">0</span>,<span class="number">1</span>];</div><div class="line">        <span class="keyword">if</span> m == <span class="string">"left"</span>:</div><div class="line">            move_pos = [<span class="number">0</span>,<span class="number">-1</span>];</div><div class="line">        curse = [curse[<span class="number">0</span>] + move_pos[<span class="number">0</span>],curse[<span class="number">1</span>] + move_pos[<span class="number">1</span>]];</div><div class="line">        <span class="keyword">if</span> curse[<span class="number">0</span>] &lt; <span class="number">0</span>:</div><div class="line">            curse[<span class="number">0</span>] =<span class="number">0</span>;</div><div class="line">        <span class="keyword">if</span> curse[<span class="number">0</span>]&gt; len(fighters):</div><div class="line">            curse[<span class="number">0</span>] =len(fighters);</div><div class="line">        output_list.append(fighters[curse[<span class="number">0</span>]][curse[<span class="number">1</span>]]);</div><div class="line">        initial_position = [curse[<span class="number">0</span>] + move_pos[<span class="number">0</span>],curse[<span class="number">1</span>] + move_pos[<span class="number">1</span>]];</div><div class="line">    <span class="keyword">return</span> output_list</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">fighters = [[<span class="string">"Ryu"</span>, <span class="string">"E.Honda"</span>, <span class="string">"Blanka"</span>, <span class="string">"Guile"</span>, <span class="string">"Balrog"</span>, <span class="string">"Vega"</span>],</div><div class="line">        [<span class="string">"Ken"</span>, <span class="string">"Chun Li"</span>, <span class="string">"Zangief"</span>, <span class="string">"Dhalsim"</span>, <span class="string">"Sagat"</span>, <span class="string">"M.Bison"</span>]]</div><div class="line"></div><div class="line">initial_position = (<span class="number">0</span>, <span class="number">0</span>)</div><div class="line"></div><div class="line">moves = [<span class="string">"up"</span>,<span class="string">"down"</span>,<span class="string">"right"</span>,<span class="string">"left"</span>]</div><div class="line"><span class="comment">#moves = ["up","left"]</span></div><div class="line">street_fighter_selection(fighters, initial_position, moves)</div></pre></td></tr></table></figure>
+<pre><code>[&apos;Ryu&apos;, &apos;Ken&apos;, &apos;Chun Li&apos;, &apos;Ken&apos;]
 </code></pre>
       
 
@@ -224,7 +222,7 @@ pi.sort() =  None
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/24/负基础入门Python_5/">more >></a>
+          <a class="article-more-a" href="/2018/07/24/负基础入门Python_4/">more >></a>
         </p>
       
 
@@ -332,51 +330,66 @@ pi.sort() =  None
 
 
   
-    <article id="post-博客搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-负基础入门Python_1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/12/博客搭建/">博客搭建</a>
+      <a class="article-title" href="/2018/07/24/负基础入门Python_1/">负基础入门Python教程_1</a>
     </h1>
   
 
         
-        <a href="/2017/11/12/博客搭建/" class="archive-article-date">
-  	<time datetime="2017-11-12T09:11:04.847Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-12</time>
+        <a href="/2018/07/24/负基础入门Python_1/" class="archive-article-date">
+  	<time datetime="2018-07-24T01:34:57.951Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>2017年11月12日</p>
-<p>&ensp;&ensp;之前在新浪博客写过一段时间，随后到CSDN，再之后到博客园，各有各的问题，最近CSDN访问老是出现问题，痛下决心，花了一天的时间按照教程搭建了一个自己的博客。<br><br>&ensp;&ensp;教程是按照<a href="https://zhangslob.github.io/2017/02/28/教你免费搭建个人博客，Hexo-Github/" target="_blank" rel="external">崔斯特的博客</a>做的，没有太大的问题，但有些小问题，不然也不会花一天的时间了，就不重复了。从上往下，挨着说：<br><br>&ensp;&ensp;1.在第三部分，设置中，本地访问<a href="http://localhost:4000" target="_blank" rel="external">localhost:4000</a>，死活进不去，最后在<a href="https://segmentfault.com/q/1010000003870970" target="_blank" rel="external">这里</a>找到了答案：可能是端口占用，这样就好了：<code>hexo server -p 4444</code><br>就是把端口换到了4444，然后访问<a href="http://localhost:4444" target="_blank" rel="external">localhost:4444</a>就行了；<br><br>&ensp;&ensp;2.注意看清命令的运行路径，不然死也不出来：<code>hexo generate</code>是在blog路径下执行的。还有就是在设置主题的时候，修改的注意对象，修改主题就在主题下面的yml，修改blog的东西就在blog下面的yml文件里面修改；<br><br>&ensp;&ensp;3.deploy时可能会报<code>error deployer not found:git</code>错误，一番检索这样<a href="http://blog.csdn.net/weixin_36401046/article/details/52940313" target="_blank" rel="external">解决</a>：需要执行<code>npm install hexo-deployer-git --save</code>；<br><br>&ensp;&ensp;别的就没什么问题，最后做下简单的记录以用于发表博客：<br><br>&ensp;&ensp;1.在任意地方或者直接在post目录下写.md文件；<br><br>&ensp;&ensp;2.打开cmder，切换到bolg文件目录，运行<code>hexo generate</code>;<br><br>&ensp;&ensp;3.最好先测试一下：<code>hexo server -p 4444</code>，没啥问题了再deploy：<code>hexo deploy</code></p>
-<hr>
-<p>2018年7月24日</p>
-<p>&ensp;&ensp;每次用都会出现新的问题，记录一下：</p>
-<ol>
-<li><p>发表博客：</p>
-<p>1).在任意地方（但是最后得拷到\blog\source\ _posts）或者直接在_posts目录下写.md文件；</p>
-<p>2).打开cmder，切换到_posts文件目录（直接cd 还不行，一种方法是<code>cd /d e:</code>，另一种方法是直接切换盘符：<code>e:</code>，然后再切换过去 ），运行<code>hexo generate</code>;</p>
-<p>3).最好先测试一下：<code>hexo server -p 4444</code>，没啥问题了再deploy：<code>hexo deploy</code></p>
-<p>但是这次<code>hexo server -p 4444</code>出现了问题，提示：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Usage: hexo &lt;command&gt;</div><div class="line">Commands:</div><div class="line">	clean</div><div class="line">	config</div><div class="line">	deploy</div><div class="line">	generate</div><div class="line">	init</div><div class="line">	...</div></pre></td></tr></table></figure>
-<p>看着像是不支持这个命令。当然是万能的解决方法了，搜索，一通捣鼓：</p>
-<p>首先是这个<a href="https://segmentfault.com/a/1190000003088603?_ea=309495，博主认为是因为没有生成本地服务，解决办法是`npm" target="_blank" rel="external">https://segmentfault.com/a/1190000003088603?_ea=309495，博主认为是因为没有生成本地服务，解决办法是`npm</a> install hexo-server –save`。</p>
-<p>然而又出现了问题：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm ERR! fetch failed http:<span class="comment">//r.cnpjs.org/moment/download/moment-2.22.2.tgz</span></div></pre></td></tr></table></figure>
-<p>后面还有很多，感觉是网址访问的问题。又是一通搜索，这个操作有点多，暂时先不搞了，有时间再说。</p>
-<p>其次，值得注意的是（感觉像在写论文），他也是从这得到的答案，有时间把这个好好看看：<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/index.html</a></p>
-</li>
-<li><p>因为前面的问题没有解决，就想着如果我不在本地预览，直接deploy行不行呢，尝试了一下，又出现了问题：<code>fatal:HeepRerquestException encoutered</code>这个错误有点吓人，都fatal了，当然没有关系，万能大法，搜索，一通捣鼓，有人说是因为需要更新，直接打开git的cmd，<code>git update</code>，但是这个下载速度慢得哟，然后看到说git的更新可以直接下载然后覆盖按照，上学校论坛下了一个最新版的前一个版本（因为没有最新的），想着虽然不是最新但是也算挺新的了，一安装，再一测试，哎，好了。终于又能写博客了。</p>
-</li>
-<li><p>这里又遗留了一个问题，主要就是现在这个All里面的每个博客的预览太多了，不直观，得想办法把预览弄得少一点。找了下config里面有这个选项，但是不知道设置项支持些什么，所以还得再看看资料。</p>
-</li>
-</ol>
-<p>今天先这样吧。</p>
+        <h2 id="01-hello-world"><a href="#01-hello-world" class="headerlink" title="01.hello world!"></a>01.hello world!</h2><p>每一个程序都应该有的hello world!</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 这行代码有毒</span></div><div class="line">print(<span class="string">"Hello, world!"</span>)</div></pre></td></tr></table></figure>
+<pre><code>Hello, world!
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">print(<span class="string">"苟利国家生死以，岂因祸福避趋之。"</span>);</div><div class="line">poem = <span class="string">"苟利国家生死以，岂因祸福避趋之。"</span></div><div class="line">print(<span class="string">"\n"</span>+poem*<span class="number">2</span>);</div></pre></td></tr></table></figure>
+<pre><code>苟利国家生死以，岂因祸福避趋之。
+
+苟利国家生死以，岂因祸福避趋之。苟利国家生死以，岂因祸福避趋之。
+</code></pre><h2 id="02-基本运算"><a href="#02-基本运算" class="headerlink" title="02.基本运算"></a>02.基本运算</h2><h3 id="整数"><a href="#整数" class="headerlink" title="整数"></a>整数</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">x = <span class="number">666</span></div><div class="line"></div><div class="line">print(<span class="string">"x + 233 = "</span>, x + <span class="number">233</span>)        <span class="comment"># 加</span></div><div class="line">print(<span class="string">"x - 233 = "</span>, x - <span class="number">233</span>)        <span class="comment"># 减</span></div><div class="line">print(<span class="string">"x * 2 = "</span>, x * <span class="number">2</span>)            <span class="comment"># 乘</span></div><div class="line">print(<span class="string">"x ** 2 = "</span>, x ** <span class="number">2</span>)          <span class="comment"># 除</span></div><div class="line"></div><div class="line"></div><div class="line">print(<span class="string">"\n17 / 4 = "</span>, <span class="number">17</span>/<span class="number">4</span>)          <span class="comment"># 浮点除</span></div><div class="line">print(<span class="string">"17 //4 = "</span>, <span class="number">17</span>//<span class="number">4</span>)           <span class="comment"># 取整除</span></div><div class="line">print(<span class="string">"17 % 4 = "</span>, <span class="number">17</span>%<span class="number">4</span>)            <span class="comment"># 求余数</span></div><div class="line"></div><div class="line">print(<span class="string">"Type of 17/4: "</span>, type(<span class="number">17</span>/<span class="number">4</span>))</div><div class="line">print(<span class="string">"Type of 17//4: "</span>, type(<span class="number">17</span>//<span class="number">4</span>))</div><div class="line">print(<span class="string">"Type of 17%4: "</span>, type(<span class="number">17</span>%<span class="number">4</span>))</div></pre></td></tr></table></figure>
+<pre><code>x + 233 =  899
+x - 233 =  433
+x * 2 =  1332
+x ** 2 =  443556
+
+17 / 4 =  4.25
+17 //4 =  4
+17 % 4 =  1
+Type of 17/4:  &lt;class &apos;float&apos;&gt;
+Type of 17//4:  &lt;class &apos;int&apos;&gt;
+Type of 17%4:  &lt;class &apos;int&apos;&gt;
+</code></pre><h4 id="练习：万有引力公式"><a href="#练习：万有引力公式" class="headerlink" title="练习：万有引力公式"></a>练习：万有引力公式</h4><p>请根据万有引力公式: g=GM/R^2，计算重力加速度，相关常数项已给出</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">G = <span class="number">6.67</span> * <span class="number">10</span> ** (<span class="number">-11</span>)</div><div class="line">M = <span class="number">5.98</span> * <span class="number">10</span> ** <span class="number">24</span></div><div class="line">R = <span class="number">6380</span> * <span class="number">10</span> ** <span class="number">3</span> </div><div class="line"></div><div class="line">g = G*M/R**<span class="number">2</span></div><div class="line">g</div></pre></td></tr></table></figure>
+<pre><code>9.799088059276148
+</code></pre><h4 id="练习：一元二次方程"><a href="#练习：一元二次方程" class="headerlink" title="练习：一元二次方程"></a>练习：一元二次方程</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">a, b, c = <span class="number">1</span>, <span class="number">5</span>, <span class="number">6</span></div><div class="line"></div><div class="line">sol1 = (-b+(b**<span class="number">2</span><span class="number">-4</span>*a*c)**<span class="number">0.5</span>)/<span class="number">2</span>/a</div><div class="line">sol2 = (-b-(b**<span class="number">2</span><span class="number">-4</span>*a*c)**<span class="number">0.5</span>)/<span class="number">2</span>/a</div><div class="line"></div><div class="line">print(sol1, sol2)</div></pre></td></tr></table></figure>
+<pre><code>-2.0 -3.0
+</code></pre><h2 id="03-布尔运算"><a href="#03-布尔运算" class="headerlink" title="03.布尔运算"></a>03.布尔运算</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">t, f = <span class="keyword">True</span>, <span class="keyword">False</span></div><div class="line">print(<span class="string">"Type of t = "</span>, type(t)) </div><div class="line"></div><div class="line">print(<span class="string">"\nt and f = "</span>, t <span class="keyword">and</span> f)    <span class="comment"># 与</span></div><div class="line">print(<span class="string">"t or f = "</span>, t <span class="keyword">or</span> f)        <span class="comment"># 或</span></div><div class="line">print(<span class="string">"not t = "</span>, <span class="keyword">not</span> t)          <span class="comment"># 非</span></div><div class="line"></div><div class="line">print(<span class="string">"\nt==f? "</span>, t==f)</div><div class="line">print(<span class="string">"t!=f?"</span>, t!=f)</div></pre></td></tr></table></figure>
+<pre><code>Type of t =  &lt;class &apos;bool&apos;&gt;
+
+t and f =  False
+t or f =  True
+not t =  False
+
+t==f?  False
+t!=f? True
+</code></pre><h3 id="条件判断"><a href="#条件判断" class="headerlink" title="条件判断"></a>条件判断</h3><p>需要注意的是<strong>缩进</strong>和<strong>冒号</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">x = <span class="number">114514</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> x%<span class="number">3</span> == <span class="number">0</span>:</div><div class="line">    print(x, <span class="string">"能被3整除"</span>)</div><div class="line"><span class="keyword">else</span>:</div><div class="line">    print(x, <span class="string">"不能被3整除"</span>)</div></pre></td></tr></table></figure>
+<pre><code>114514 不能被3整除
+</code></pre><h4 id="练习：闰年"><a href="#练习：闰年" class="headerlink" title="练习：闰年"></a>练习：闰年</h4><p>公历年份被4整除，且若该年可被100整除，则必须同时被400整除。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">year = <span class="number">2018</span></div><div class="line">if_leap = <span class="keyword">False</span></div><div class="line"></div><div class="line"><span class="keyword">if</span> year%<span class="number">4</span>==<span class="number">0</span>:</div><div class="line">    <span class="keyword">if</span> year%<span class="number">100</span>:</div><div class="line">        <span class="keyword">if</span> year%<span class="number">400</span>:</div><div class="line">            if_leap = <span class="keyword">True</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        if_leap = <span class="keyword">False</span></div><div class="line"></div><div class="line"><span class="keyword">else</span>:</div><div class="line">    if_leap = <span class="keyword">False</span></div><div class="line"></div><div class="line"></div><div class="line">dict_year = &#123;<span class="keyword">True</span>:<span class="string">"是"</span>, <span class="keyword">False</span>:<span class="string">"不是"</span>&#125;</div><div class="line">print(<span class="string">"该年度&#123;&#125;闰年"</span>.format(dict_year[if_leap]))</div><div class="line"><span class="comment">#这里用了一个字典</span></div></pre></td></tr></table></figure>
+<pre><code>该年度不是闰年
+</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> this</div></pre></td></tr></table></figure>
 
       
 
@@ -390,7 +403,7 @@ pi.sort() =  None
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">博客建设</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
         		</li>
       		
 		</ul>
@@ -400,7 +413,7 @@ pi.sort() =  None
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/12/博客搭建/">more >></a>
+          <a class="article-more-a" href="/2018/07/24/负基础入门Python_1/">more >></a>
         </p>
       
 
@@ -814,11 +827,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Python</a>
+                <a href="javascript:void(0)" class="js-tag color5">博客建设</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">博客建设</a>
+                <a href="javascript:void(0)" class="js-tag color2">Python</a>
               </li>
             
             <div class="clearfix"></div>
