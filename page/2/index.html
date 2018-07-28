@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>PORTB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="技术博客，自动化人的乱七八糟">
+  <meta name="description" content="技术博客，自动化人的不务正业">
 <meta property="og:type" content="website">
 <meta property="og:title" content="PORTB">
 <meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="PORTB">
-<meta property="og:description" content="技术博客，自动化人的乱七八糟">
+<meta property="og:description" content="技术博客，自动化人的不务正业">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="PORTB">
-<meta name="twitter:description" content="技术博客，自动化人的乱七八糟">
+<meta name="twitter:description" content="技术博客，自动化人的不务正业">
   
     <link rel="alternative" href="/atom.xml" title="PORTB" type="application/atom+xml">
   
@@ -143,6 +143,193 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-负基础入门Python_4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/24/负基础入门Python_4/">负基础入门Python教程_4</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/24/负基础入门Python_4/" class="archive-article-date">
+  	<time datetime="2018-07-24T02:35:53.603Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="10-列表常用函数与方法"><a href="#10-列表常用函数与方法" class="headerlink" title="10. 列表常用函数与方法"></a>10. 列表常用函数与方法</h2><p>sum：求和</p>
+<p>len：获取列表长度</p>
+<p>.append()：添加元素</p>
+<h3 id="练习：距平均数的偏差"><a href="#练习：距平均数的偏差" class="headerlink" title="练习：距平均数的偏差"></a>练习：距平均数的偏差</h3><p>输入参数为数值列表</p>
+<p>计算列表元素平均值（保留两位小数）</p>
+<p>计算列表元素与平均值的差</p>
+<p>返回由偏差组成的列表</p>
+<p>对参数x保留两位小数的函数：round(x,2)</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">dst_avg</span><span class="params">(input_list)</span>:</span></div><div class="line">    output_list = [];</div><div class="line">    average_of_list = round(sum(input_list)/len(input_list),<span class="number">2</span>);</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> input_list:</div><div class="line">        output_list.append(i-average_of_list);</div><div class="line">    <span class="keyword">return</span> output_list</div></pre></td></tr></table></figure>
+<p>测试不通过，这就十二分尴尬了，最后看了下答案，他是下面这样写的orz，那就是在某些测试数据下先四舍五入和先作差会导致不同。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">dst_avg</span><span class="params">(input_list)</span>:</span></div><div class="line">    output_list = [];</div><div class="line">    average_of_list = sum(input_list)/len(input_list);</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> input_list:</div><div class="line">        output_list.append(round(i-average_of_list,<span class="number">2</span>));</div><div class="line">    <span class="keyword">return</span> output_list</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dst_avg([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</div></pre></td></tr></table></figure>
+<pre><code>[-2.0, -1.0, 0.0, 1.0, 2.0]
+</code></pre><h2 id="11-列表推导式"><a href="#11-列表推导式" class="headerlink" title="11.列表推导式"></a>11.列表推导式</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 找出20以内3的倍数，存入列表`multi3`</span></div><div class="line"><span class="comment"># 1&gt; 循环遍历</span></div><div class="line"></div><div class="line">multi3 = []    <span class="comment"># 新建空列表</span></div><div class="line"></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">21</span>):</div><div class="line">    <span class="keyword">if</span> i%<span class="number">3</span> == <span class="number">0</span>:</div><div class="line">        multi3.append(i)</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment"># 2&gt; 列表推导式</span></div><div class="line"></div><div class="line">[i <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">21</span>) <span class="keyword">if</span> i%<span class="number">3</span> == <span class="number">0</span>]</div></pre></td></tr></table></figure>
+<pre><code>[0, 3, 6, 9, 12, 15, 18]
+</code></pre><h3 id="练习：依然是距平均数的偏差"><a href="#练习：依然是距平均数的偏差" class="headerlink" title="练习：依然是距平均数的偏差"></a>练习：依然是距平均数的偏差</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">dst_avg</span><span class="params">(input_list)</span>:</span></div><div class="line">    <span class="keyword">return</span>[round(i-sum(input_list)/len(input_list),<span class="number">2</span>) <span class="keyword">for</span> i <span class="keyword">in</span> input_list ]</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">dst_avg([<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>])</div></pre></td></tr></table></figure>
+<pre><code>[-2.0, -1.0, 0.0, 1.0, 2.0]
+</code></pre><h2 id="12-嵌套列表"><a href="#12-嵌套列表" class="headerlink" title="12.嵌套列表"></a>12.嵌套列表</h2><p>列表的元素也可以是列表，嵌套的列表可以表示高维数组。</p>
+<p>完成以下程序：</p>
+<p>获取列表coding的第0个元素，存入变量coding0</p>
+<p>获取列表coding0的第0个元素，存入变量coding00</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">coding = [[<span class="string">"Python"</span>, <span class="string">"Go"</span>, <span class="string">".NET"</span>], </div><div class="line">          [<span class="string">"Java"</span>, <span class="string">"C"</span>, <span class="string">"Scala"</span>],</div><div class="line">          [<span class="string">"Haskell"</span>, <span class="string">"PHP"</span>, <span class="string">"JavaScript"</span>]]</div><div class="line">coding0 = coding[<span class="number">0</span>]</div><div class="line">coding00 = coding0[<span class="number">0</span>]</div></pre></td></tr></table></figure>
+<h3 id="练习：街头霸王"><a href="#练习：街头霸王" class="headerlink" title="练习：街头霸王"></a>练习：街头霸王</h3><p>经典的《街头霸王》有12个人物可以选择，在没有鼠标和触摸板的年代，选择靠的是方向键，这里我们就用Python来模拟一下选人的过程。</p>
+<p>这12个待选人物以2x6矩阵的形式排列：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">fighters = [[<span class="string">"Ryu"</span>, <span class="string">"E.Honda"</span>, <span class="string">"Blanka"</span>, <span class="string">"Guile"</span>, <span class="string">"Balrog"</span>, <span class="string">"Vega"</span>],</div><div class="line">        [<span class="string">"Ken"</span>, <span class="string">"Chun Li"</span>, <span class="string">"Zangief"</span>, <span class="string">"Dhalsim"</span>, <span class="string">"Sagat"</span>, <span class="string">"M.Bison"</span>]]</div><div class="line"></div><div class="line">initial_position = (<span class="number">0</span>, <span class="number">0</span>)</div></pre></td></tr></table></figure>
+<p>可以施加的行动就是“上下左右”四种：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">moves = [<span class="string">"up"</span>,<span class="string">"down"</span>,<span class="string">"right"</span>,<span class="string">"left"</span>]</div></pre></td></tr></table></figure>
+<p>最左上角的Ryu（耗油跟）的位置是0,0, 右下角M.Bison的位置是1,5。值得注意的是边界规则：</p>
+<p>对于左右方向的移动，列表是“首尾相接”的。比如指针在Vega的时候再执行right，就会跳回Ryu。</p>
+<p>对于上下方向的移动，列表是“两端封闭”的。比如指针在Ryu的时候再执行up，光标的位置不变。</p>
+<p>请完成函数street_fighter_selection()的定义，输入参数有之前的fighters, initial_position，以及由”up”,”down”,”right”,”left”四种元素组成的移动序列。</p>
+<p>要求输出的是，在moves的作用下，光标都扫过了哪些英雄，按顺序组成一个列表。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">street_fighter_selection</span><span class="params">(fighters, initial_position, moves)</span>:</span></div><div class="line">    output_list = [];</div><div class="line">    curse = initial_position;</div><div class="line">    <span class="keyword">for</span> m <span class="keyword">in</span> moves:</div><div class="line">        <span class="keyword">if</span> m == <span class="string">"up"</span>:</div><div class="line">            move_pos = [<span class="number">-1</span>,<span class="number">0</span>];</div><div class="line">        <span class="keyword">if</span> m == <span class="string">"down"</span>:</div><div class="line">            move_pos = [<span class="number">1</span>,<span class="number">0</span>];</div><div class="line">        <span class="keyword">if</span> m == <span class="string">"right"</span>:</div><div class="line">            move_pos = [<span class="number">0</span>,<span class="number">1</span>];</div><div class="line">        <span class="keyword">if</span> m == <span class="string">"left"</span>:</div><div class="line">            move_pos = [<span class="number">0</span>,<span class="number">-1</span>];</div><div class="line">        curse = [curse[<span class="number">0</span>] + move_pos[<span class="number">0</span>],curse[<span class="number">1</span>] + move_pos[<span class="number">1</span>]];</div><div class="line">        <span class="keyword">if</span> curse[<span class="number">0</span>] &lt; <span class="number">0</span>:</div><div class="line">            curse[<span class="number">0</span>] =<span class="number">0</span>;</div><div class="line">        <span class="keyword">if</span> curse[<span class="number">0</span>]&gt; len(fighters):</div><div class="line">            curse[<span class="number">0</span>] =len(fighters);</div><div class="line">        output_list.append(fighters[curse[<span class="number">0</span>]][curse[<span class="number">1</span>]]);</div><div class="line">        initial_position = [curse[<span class="number">0</span>] + move_pos[<span class="number">0</span>],curse[<span class="number">1</span>] + move_pos[<span class="number">1</span>]];</div><div class="line">    <span class="keyword">return</span> output_list</div></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">fighters = [[<span class="string">"Ryu"</span>, <span class="string">"E.Honda"</span>, <span class="string">"Blanka"</span>, <span class="string">"Guile"</span>, <span class="string">"Balrog"</span>, <span class="string">"Vega"</span>],</div><div class="line">        [<span class="string">"Ken"</span>, <span class="string">"Chun Li"</span>, <span class="string">"Zangief"</span>, <span class="string">"Dhalsim"</span>, <span class="string">"Sagat"</span>, <span class="string">"M.Bison"</span>]]</div><div class="line"></div><div class="line">initial_position = (<span class="number">0</span>, <span class="number">0</span>)</div><div class="line"></div><div class="line">moves = [<span class="string">"up"</span>,<span class="string">"down"</span>,<span class="string">"right"</span>,<span class="string">"left"</span>]</div><div class="line"><span class="comment">#moves = ["up","left"]</span></div><div class="line">street_fighter_selection(fighters, initial_position, moves)</div></pre></td></tr></table></figure>
+<pre><code>[&apos;Ryu&apos;, &apos;Ken&apos;, &apos;Chun Li&apos;, &apos;Ken&apos;]
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/24/负基础入门Python_4/">more >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-QT安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/10/QT安装/">第一课 QT安装</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/10/QT安装/" class="archive-article-date">
+  	<time datetime="2017-11-10T03:57:03.558Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&ensp;&ensp;本科开始接触MFC，当时是一门选修课，作为自动化的专业来说，常常需要一个UI来简单的表示一下结果，用的最多的可能就是串口接收了吧，刚好有这个选修课，所以本科一直用MFC来做的界面开发，上了研究生后，时间多一点了，打算系统的学习一些东西，在看《C++ Primer》的同时，发现师兄们做项目，老师依然要求用MFC，其实早于这个时候我就听说MFC已经过时了，要说具体哪里不好，没有这个能力来做评价（网上不懂装懂的人太多了，不想做这样的人233），在知乎逛了一圈，决定开始学习QT，因为同样是基于C++，所以直接在网上找了教程开始学，教程是这个<a href="https://zhuanlan.zhihu.com/p/28224035" target="_blank" rel="external">跟小豆君学QT</a>，重复的不用多说，按照教程走下来，空白窗口没有出现，出现了这样一个错误：<br><font color="red">Failed to start program. Path or permissions wrong?</font><br>当时就虎躯一震，凭感觉这个不是中文路径或者杀毒软件的问题吗？但是我怎么会犯这种错误呢？检查了一下也没有这问题，怀疑是UAC的问题，把UAC关了还是不行。按照惯例一顿搜索，找了一些解决方案：添加环境变量/关闭杀毒软件/不要有中文路径/关闭UAC，当然都不行，一筹莫展，打开工程目录，发现这个文件已经在了，双击打开，可以用啊。之后又想着再来一下，重建了下，发现可以了，突然想起了刚看到的一个<a href="http://bbs.csdn.net/topics/390259409" target="_blank" rel="external">帖子</a>，提到这样一句话：</p>
+<blockquote>
+<p>只要我的target 名称中包含Update或者Installer单词，生成的exe文件就会被UAC限制，改成其他乱七八糟的名字就行。</p>
+</blockquote>
+<p>刚才因为是第一讲安装软件，所以取了个名字叫做setup，重现了下这个错误确实是这样的，改个名字就好了。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">QT学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/10/QT安装/">more >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-负基础入门Python_3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -204,215 +391,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/07/24/负基础入门Python_3/">more >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-博客搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/12/博客搭建/">博客搭建</a>
-    </h1>
-  
-
-        
-        <a href="/2017/11/12/博客搭建/" class="archive-article-date">
-  	<time datetime="2017-11-12T09:11:04.847Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>2017年11月12日</p>
-<p>&ensp;&ensp;之前在新浪博客写过一段时间，随后到CSDN，再之后到博客园，各有各的问题，最近CSDN访问老是出现问题，痛下决心，花了一天的时间按照教程搭建了一个自己的博客。<br><br>&ensp;&ensp;教程是按照<a href="https://zhangslob.github.io/2017/02/28/教你免费搭建个人博客，Hexo-Github/" target="_blank" rel="external">崔斯特的博客</a>做的，没有太大的问题，但有些小问题，不然也不会花一天的时间了，就不重复了。从上往下，挨着说：<br><br>&ensp;&ensp;1.在第三部分，设置中，本地访问<a href="http://localhost:4000" target="_blank" rel="external">localhost:4000</a>，死活进不去，最后在<a href="https://segmentfault.com/q/1010000003870970" target="_blank" rel="external">这里</a>找到了答案：可能是端口占用，这样就好了：<code>hexo server -p 4444</code><br>就是把端口换到了4444，然后访问<a href="http://localhost:4444" target="_blank" rel="external">localhost:4444</a>就行了；<br><br>&ensp;&ensp;2.注意看清命令的运行路径，不然死也不出来：<code>hexo generate</code>是在blog路径下执行的。还有就是在设置主题的时候，修改的注意对象，修改主题就在主题下面的yml，修改blog的东西就在blog下面的yml文件里面修改；<br><br>&ensp;&ensp;3.deploy时可能会报<code>error deployer not found:git</code>错误，一番检索这样<a href="http://blog.csdn.net/weixin_36401046/article/details/52940313" target="_blank" rel="external">解决</a>：需要执行<code>npm install hexo-deployer-git --save</code>；<br><br>&ensp;&ensp;别的就没什么问题，最后做下简单的记录以用于发表博客：<br><br>&ensp;&ensp;1.在任意地方或者直接在post目录下写.md文件；<br><br>&ensp;&ensp;2.打开cmder，切换到bolg文件目录，运行<code>hexo generate</code>;<br><br>&ensp;&ensp;3.最好先测试一下：<code>hexo server -p 4444</code>，没啥问题了再deploy：<code>hexo deploy</code></p>
-<hr>
-<p>2018年7月24日</p>
-<p>&ensp;&ensp;每次用都会出现新的问题，记录一下：</p>
-<ol>
-<li><p>发表博客：</p>
-<p>1).在任意地方（但是最后得拷到\blog\source\ _posts）或者直接在_posts目录下写.md文件；</p>
-<p>2).打开cmder，切换到_posts文件目录（直接cd 还不行，一种方法是<code>cd /d e:</code>，另一种方法是直接切换盘符：<code>e:</code>，然后再切换过去 ），运行<code>hexo generate</code>;</p>
-<p>3).最好先测试一下：<code>hexo server -p 4444</code>，没啥问题了再deploy：<code>hexo deploy</code></p>
-<p>但是这次<code>hexo server -p 4444</code>出现了问题，提示：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">Usage: hexo &lt;command&gt;</div><div class="line">Commands:</div><div class="line">	clean</div><div class="line">	config</div><div class="line">	deploy</div><div class="line">	generate</div><div class="line">	init</div><div class="line">	...</div></pre></td></tr></table></figure>
-<p>看着像是不支持这个命令。当然是万能的解决方法了，搜索，一通捣鼓：</p>
-<p>首先是这个<a href="https://segmentfault.com/a/1190000003088603?_ea=309495，博主认为是因为没有生成本地服务，解决办法是`npm" target="_blank" rel="external">https://segmentfault.com/a/1190000003088603?_ea=309495，博主认为是因为没有生成本地服务，解决办法是`npm</a> install hexo-server –save`。</p>
-<p>然而又出现了问题：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm ERR! fetch failed http:<span class="comment">//r.cnpjs.org/moment/download/moment-2.22.2.tgz</span></div></pre></td></tr></table></figure>
-<p>后面还有很多，感觉是网址访问的问题。又是一通搜索，这个操作有点多，暂时先不搞了，有时间再说。</p>
-<p>其次，值得注意的是（感觉像在写论文），他也是从这得到的答案，有时间把这个好好看看：<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">https://hexo.io/zh-cn/docs/index.html</a></p>
-</li>
-<li><p>因为前面的问题没有解决，就想着如果我不在本地预览，直接deploy行不行呢，尝试了一下，又出现了问题：<code>fatal:HeepRerquestException encoutered</code>这个错误有点吓人，都fatal了，当然没有关系，万能大法，搜索，一通捣鼓，有人说是因为需要更新，直接打开git的cmd，<code>git update</code>，但是这个下载速度慢得哟，然后看到说git的更新可以直接下载然后覆盖按照，上学校论坛下了一个最新版的前一个版本（因为没有最新的），想着虽然不是最新但是也算挺新的了，一安装，再一测试，哎，好了。终于又能写博客了。</p>
-</li>
-<li><p>这里又遗留了一个问题，主要就是现在这个All里面的每个博客的预览太多了，不直观，得想办法把预览弄得少一点。找了下config里面有这个选项，但是不知道设置项支持些什么，所以还得再看看资料。</p>
-</li>
-</ol>
-<p>今天先这样吧。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">博客建设</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/12/博客搭建/">more >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-负基础入门Python_5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/24/负基础入门Python_5/">负基础入门Python教程_5</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/24/负基础入门Python_5/" class="archive-article-date">
-  	<time datetime="2018-07-24T02:36:01.562Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="13-查找"><a href="#13-查找" class="headerlink" title="13.查找"></a>13.查找</h2><h3 id="练习：二分查找"><a href="#练习：二分查找" class="headerlink" title="练习：二分查找"></a>练习：二分查找</h3><p>有序数列找数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">binary_search</span><span class="params">(lst, item)</span>:</span></div><div class="line"></div><div class="line">    <span class="comment"># 下界索引</span></div><div class="line">    low = <span class="number">0</span></div><div class="line">    <span class="comment"># 上界索引</span></div><div class="line">    high = len(lst) - <span class="number">1</span></div><div class="line"></div><div class="line">    <span class="keyword">while</span> low &lt;= high:</div><div class="line">        <span class="comment"># 中值</span></div><div class="line">        mid = (low + high) // <span class="number">2</span></div><div class="line">        <span class="comment"># 猜测结果</span></div><div class="line">        guess = lst[mid]</div><div class="line"></div><div class="line">        <span class="comment"># 猜中</span></div><div class="line">        <span class="keyword">if</span> guess == item:</div><div class="line">            <span class="keyword">return</span> mid</div><div class="line">        <span class="comment"># 偏大</span></div><div class="line">        <span class="keyword">if</span> guess &gt; item:</div><div class="line">            high = mid - <span class="number">1</span></div><div class="line">        <span class="comment"># 偏小</span></div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            low = mid + <span class="number">1</span></div><div class="line"></div><div class="line">    <span class="comment"># 查找不到</span></div><div class="line">    <span class="keyword">return</span> <span class="keyword">None</span></div><div class="line"></div><div class="line">print(binary_search([<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">13</span>], <span class="number">9</span>))</div></pre></td></tr></table></figure>
-<pre><code>None
-</code></pre><h3 id="13-1-内置的查找方法"><a href="#13-1-内置的查找方法" class="headerlink" title="13.1 内置的查找方法"></a>13.1 内置的查找方法</h3><p>.index()#返回索引</p>
-<p>.count()#计数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">lst = [<span class="number">3</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">6</span>]</div><div class="line"></div><div class="line">lst.index(<span class="number">9</span>)    <span class="comment"># 5</span></div><div class="line">lst.count(<span class="number">1</span>)    <span class="comment"># 2</span></div></pre></td></tr></table></figure>
-<pre><code>2
-</code></pre><h3 id="练习："><a href="#练习：" class="headerlink" title="练习："></a>练习：</h3><p>如果宋江是第1把交椅，则花荣的座次是多少？将结果赋值给变量xiaoliguang</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">hans = [<span class="string">"宋江"</span>, <span class="string">"卢俊义"</span>, <span class="string">"吴用"</span>, <span class="string">"公孙胜"</span>, <span class="string">"关胜"</span>, <span class="string">"林冲"</span>, <span class="string">"秦明"</span>, <span class="string">"呼延灼"</span>, <span class="string">"花荣"</span>]</div><div class="line"></div><div class="line"><span class="comment"># &gt;&gt;&gt;&gt; show me the code &lt;&lt;&lt;&lt;</span></div><div class="line"></div><div class="line">xiaoliguang = hans.index(<span class="string">"花荣"</span>) + <span class="number">1</span></div><div class="line">xiaoliguang</div><div class="line"><span class="comment"># &gt;&gt;&gt;&gt; show me the code &lt;&lt;&lt;&lt;</span></div></pre></td></tr></table></figure>
-<pre><code>9
-</code></pre><h3 id="13-2-内置查找关键字"><a href="#13-2-内置查找关键字" class="headerlink" title="13.2 内置查找关键字"></a>13.2 内置查找关键字</h3><p>in #返回值为Ture or False</p>
-<p>not in</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">primes = [<span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">11</span>, <span class="number">13</span>, <span class="number">17</span>, <span class="number">19</span>]</div><div class="line"></div><div class="line">print(<span class="string">"9 in primes =&gt; "</span>, <span class="number">9</span> <span class="keyword">in</span> primes)</div><div class="line">print(<span class="string">"9 not in primes =&gt; "</span>, <span class="number">9</span> <span class="keyword">not</span> <span class="keyword">in</span> primes)</div></pre></td></tr></table></figure>
-<pre><code>9 in primes =&gt;  False
-9 not in primes =&gt;  True
-</code></pre><h2 id="14-排序"><a href="#14-排序" class="headerlink" title="14.排序"></a>14.排序</h2><p>“二分法”只适用于已经按顺序排好的列表，尝试用相同方法在无序列表中进行查找：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">binary_search</span><span class="params">(lst, item)</span>:</span></div><div class="line"></div><div class="line">    low = <span class="number">0</span></div><div class="line">    high = len(lst) - <span class="number">1</span></div><div class="line"></div><div class="line">    <span class="keyword">while</span> low &lt;= high:</div><div class="line">        mid = (low + high) // <span class="number">2</span></div><div class="line">        guess = lst[mid]</div><div class="line"></div><div class="line">        <span class="keyword">if</span> guess == item:</div><div class="line">            <span class="keyword">return</span> mid</div><div class="line">        <span class="keyword">if</span> guess &gt; item:</div><div class="line">            high = mid - <span class="number">1</span></div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            low = mid + <span class="number">1</span></div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="keyword">None</span></div><div class="line"></div><div class="line">print(binary_search([<span class="number">3</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">6</span>], <span class="number">4</span>))</div></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</div><div class="line">a[<span class="number">-1</span>]</div></pre></td></tr></table></figure>
-<pre><code>5
-</code></pre><h2 id="14-1选择排序"><a href="#14-1选择排序" class="headerlink" title="14.1选择排序"></a>14.1选择排序</h2><p>挑最小的放到最前面</p>
-<p>故任务分成两个部分：一个挑最小，一个放</p>
-<p>一个返回列表最小值索引的函数find_smallest()已经定义，请补充函数selection_sort()的定义，使其完成选择排序：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_smallest</span><span class="params">(lst)</span>:</span></div><div class="line">    <span class="comment"># 先假设列表第0元素为最小</span></div><div class="line">    smallest = lst[<span class="number">0</span>]</div><div class="line">    smallest_index = <span class="number">0</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, len(lst)):</div><div class="line">        <span class="comment"># 如果比当前的“最小”还小</span></div><div class="line">        <span class="keyword">if</span> lst[i] &lt; smallest:</div><div class="line">            <span class="comment"># 替换当前的“最小”</span></div><div class="line">            smallest = lst[i]</div><div class="line">            smallest_index = i</div><div class="line">    <span class="comment"># 返回最小值的索引</span></div><div class="line">    <span class="keyword">return</span> smallest_index</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">selection_sort</span><span class="params">(lst)</span>:</span></div><div class="line"></div><div class="line">    new_lst = []</div><div class="line">    <span class="keyword">while</span> len(lst)&gt;<span class="number">0</span>:</div><div class="line">        new_lst.append(lst[find_smallest(lst)]);</div><div class="line">        lst.remove(new_lst[<span class="number">-1</span>]);</div><div class="line">    <span class="keyword">return</span> new_lst</div></pre></td></tr></table></figure>
-<h2 id="14-2-快速排序"><a href="#14-2-快速排序" class="headerlink" title="14.2 快速排序"></a>14.2 快速排序</h2><p>快速排序就是挑一个（任意）比它大放右边，否则放左边，然后左边右边分别递归。</p>
-<h3 id="复习递归"><a href="#复习递归" class="headerlink" title="复习递归"></a>复习递归</h3><p>计算阶乘</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">fact</span><span class="params">(n)</span>:</span></div><div class="line">    <span class="keyword">if</span> n == <span class="number">0</span>:</div><div class="line">        <span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">return</span> n*fact(n<span class="number">-1</span>);</div></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">fact(<span class="number">5</span>)</div></pre></td></tr></table></figure>
-<pre><code>120
-</code></pre><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span><span class="params">(lst)</span>:</span></div><div class="line"></div><div class="line">    <span class="comment"># 递归终点：未排序列表的长度减至1（就剩一个数，不用再排了）</span></div><div class="line">    <span class="keyword">if</span> len(lst) &lt;= <span class="number">1</span>:</div><div class="line">        <span class="keyword">return</span> lst</div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="comment"># 假设列表的第0元素为pivot</span></div><div class="line">        pivot = lst[<span class="number">0</span>]</div><div class="line">        <span class="comment"># 列表推导式：对小于/大于pivot的元素，分别组成两个新列表</span></div><div class="line">        less = [i <span class="keyword">for</span> i <span class="keyword">in</span> lst[<span class="number">1</span>:] <span class="keyword">if</span> i &lt;= pivot]</div><div class="line">        greater = [i <span class="keyword">for</span> i <span class="keyword">in</span> lst[<span class="number">1</span>:] <span class="keyword">if</span> i &gt; pivot]</div><div class="line">        <span class="comment"># 合并三个列表</span></div><div class="line">        <span class="keyword">return</span> quick_sort(less) + [pivot] + quick_sort(greater)</div><div class="line"></div><div class="line">print(quick_sort([<span class="number">3</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">8</span>]))</div></pre></td></tr></table></figure>
-<pre><code>[1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 8, 8, 9, 9]
-</code></pre><h3 id="14-3-内置排序函数-方法"><a href="#14-3-内置排序函数-方法" class="headerlink" title="14.3 内置排序函数/方法"></a>14.3 内置排序函数/方法</h3><p>sorted()，Python内置函数，将参数列表排序后生成一个新列表作为返回值，源列表不变。</p>
-<p>.sort()，列表方法，将列表排序，没有返回值，不保留原有无序列表。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">pi = [<span class="number">3</span>,<span class="number">1</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">2</span>,<span class="number">6</span>,<span class="number">5</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">8</span>]</div><div class="line"></div><div class="line">sorted_pi = sorted(pi)</div><div class="line">print(<span class="string">"sorted(pi) = "</span>, sorted_pi)</div><div class="line">print(<span class="string">"sorted(), pi = "</span>, pi)</div><div class="line"></div><div class="line">pi_sort = pi.sort()</div><div class="line">print(<span class="string">"\npi.sort() = "</span>, pi_sort)</div><div class="line">print(<span class="string">".sort(), pi = "</span>, pi)</div></pre></td></tr></table></figure>
-<pre><code>sorted(pi) =  [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 8, 8, 9, 9]
-sorted(), pi =  [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5, 8, 9, 8]
-
-pi.sort() =  None
-.sort(), pi =  [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 8, 8, 9, 9]
-</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/24/负基础入门Python_5/">more >></a>
         </p>
       
 
@@ -807,11 +785,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">QT学习</a>
+                <a href="javascript:void(0)" class="js-tag color5">博客建设</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">博客建设</a>
+                <a href="javascript:void(0)" class="js-tag color5">QT学习</a>
               </li>
              
               <li class="article-tag-list-item">
