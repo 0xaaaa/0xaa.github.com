@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="PORTB">
 <meta property="og:description" content="07.循环+函数最大公约数最大公约数(Great Common Denominator)：同时被两个数整除的最大正整数，如： gcd(6, 9) = 3, gcd(18, 24) = 6 1234567891011def gcd(a,b):    # 保证a大b小    if b &amp;gt; a:        a, b = b, a    while a % b != 0:    # 当a不整除b">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-24T02:37:41.538Z">
+<meta property="og:updated_time" content="2018-07-28T05:19:23.596Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="负基础入门Python教程_3">
 <meta name="twitter:description" content="07.循环+函数最大公约数最大公约数(Great Common Denominator)：同时被两个数整除的最大正整数，如： gcd(6, 9) = 3, gcd(18, 24) = 6 1234567891011def gcd(a,b):    # 保证a大b小    if b &amp;gt; a:        a, b = b, a    while a % b != 0:    # 当a不整除b">
@@ -167,6 +167,7 @@
 <p>gcd(6, 9) = 3, gcd(18, 24) = 6</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">gcd</span><span class="params">(a,b)</span>:</span></div><div class="line"></div><div class="line">    <span class="comment"># 保证a大b小</span></div><div class="line">    <span class="keyword">if</span> b &gt; a:</div><div class="line">        a, b = b, a</div><div class="line"></div><div class="line"></div><div class="line">    <span class="keyword">while</span> a % b != <span class="number">0</span>:    <span class="comment"># 当a不整除b（余数不为0）的时候</span></div><div class="line">        a,b = b, a%b     <span class="comment"># b-&gt;a, a%b-&gt;b</span></div><div class="line"></div><div class="line">    <span class="keyword">return</span> b</div></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">gcd(<span class="number">6</span>,<span class="number">23</span>)</div></pre></td></tr></table></figure>
+<a id="more"></a> 
 <pre><code>1
 </code></pre><h2 id="08-函数嵌套"><a href="#08-函数嵌套" class="headerlink" title="08.函数嵌套"></a>08.函数嵌套</h2><h4 id="最小公倍数"><a href="#最小公倍数" class="headerlink" title="最小公倍数"></a>最小公倍数</h4><p>最小公倍数：同时整除两个数的最小正整数，如：</p>
 <p>lcm(6, 9) = 18, lcm(18 ,24) = 72</p>

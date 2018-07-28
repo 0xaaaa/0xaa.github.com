@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>负基础入门Python教程_4 | PORTB</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="10. 列表常用函数与方法sum：求和 len：获取列表长度 .append()：添加元素 练习：距平均数的偏差输入参数为数值列表 计算列表元素平均值（保留两位小数） 计算列表元素与平均值的差 返回由偏差组成的列表 对参数x保留两位小数的函数：round(x,2) 123456def dst_avg(input_list):    output_list = [];    average_of">
+  <meta name="description" content="10. 列表常用函数与方法sum：求和 len：获取列表长度 .append()：添加元素 练习：距平均数的偏差输入参数为数值列表 计算列表元素平均值（保留两位小数） 计算列表元素与平均值的差 返回由偏差组成的列表 对参数x保留两位小数的函数：round(x,2)">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="负基础入门Python教程_4">
 <meta property="og:url" content="http://yoursite.com/2018/07/24/负基础入门Python_4/index.html">
 <meta property="og:site_name" content="PORTB">
-<meta property="og:description" content="10. 列表常用函数与方法sum：求和 len：获取列表长度 .append()：添加元素 练习：距平均数的偏差输入参数为数值列表 计算列表元素平均值（保留两位小数） 计算列表元素与平均值的差 返回由偏差组成的列表 对参数x保留两位小数的函数：round(x,2) 123456def dst_avg(input_list):    output_list = [];    average_of">
+<meta property="og:description" content="10. 列表常用函数与方法sum：求和 len：获取列表长度 .append()：添加元素 练习：距平均数的偏差输入参数为数值列表 计算列表元素平均值（保留两位小数） 计算列表元素与平均值的差 返回由偏差组成的列表 对参数x保留两位小数的函数：round(x,2)">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-07-28T05:10:09.459Z">
+<meta property="og:updated_time" content="2018-07-28T05:18:56.314Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="负基础入门Python教程_4">
-<meta name="twitter:description" content="10. 列表常用函数与方法sum：求和 len：获取列表长度 .append()：添加元素 练习：距平均数的偏差输入参数为数值列表 计算列表元素平均值（保留两位小数） 计算列表元素与平均值的差 返回由偏差组成的列表 对参数x保留两位小数的函数：round(x,2) 123456def dst_avg(input_list):    output_list = [];    average_of">
+<meta name="twitter:description" content="10. 列表常用函数与方法sum：求和 len：获取列表长度 .append()：添加元素 练习：距平均数的偏差输入参数为数值列表 计算列表元素平均值（保留两位小数） 计算列表元素与平均值的差 返回由偏差组成的列表 对参数x保留两位小数的函数：round(x,2)">
   
     <link rel="alternative" href="/atom.xml" title="PORTB" type="application/atom+xml">
   
@@ -163,8 +163,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a> 
-<h2 id="10-列表常用函数与方法"><a href="#10-列表常用函数与方法" class="headerlink" title="10. 列表常用函数与方法"></a>10. 列表常用函数与方法</h2><p>sum：求和</p>
+        <h2 id="10-列表常用函数与方法"><a href="#10-列表常用函数与方法" class="headerlink" title="10. 列表常用函数与方法"></a>10. 列表常用函数与方法</h2><p>sum：求和</p>
 <p>len：获取列表长度</p>
 <p>.append()：添加元素</p>
 <h3 id="练习：距平均数的偏差"><a href="#练习：距平均数的偏差" class="headerlink" title="练习：距平均数的偏差"></a>练习：距平均数的偏差</h3><p>输入参数为数值列表</p>
@@ -172,6 +171,7 @@
 <p>计算列表元素与平均值的差</p>
 <p>返回由偏差组成的列表</p>
 <p>对参数x保留两位小数的函数：round(x,2)</p>
+<a id="more"></a> 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">dst_avg</span><span class="params">(input_list)</span>:</span></div><div class="line">    output_list = [];</div><div class="line">    average_of_list = round(sum(input_list)/len(input_list),<span class="number">2</span>);</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> input_list:</div><div class="line">        output_list.append(i-average_of_list);</div><div class="line">    <span class="keyword">return</span> output_list</div></pre></td></tr></table></figure>
 <p>测试不通过，这就十二分尴尬了，最后看了下答案，他是下面这样写的orz，那就是在某些测试数据下先四舍五入和先作差会导致不同。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">dst_avg</span><span class="params">(input_list)</span>:</span></div><div class="line">    output_list = [];</div><div class="line">    average_of_list = sum(input_list)/len(input_list);</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> input_list:</div><div class="line">        output_list.append(round(i-average_of_list,<span class="number">2</span>));</div><div class="line">    <span class="keyword">return</span> output_list</div></pre></td></tr></table></figure>
