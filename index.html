@@ -143,32 +143,36 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-负基础入门Python_5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-负基础入门Python_4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/24/负基础入门Python_5/">负基础入门Python教程_5</a>
+      <a class="article-title" href="/2018/07/24/负基础入门Python_4/">负基础入门Python教程_4</a>
     </h1>
   
 
         
-        <a href="/2018/07/24/负基础入门Python_5/" class="archive-article-date">
-  	<time datetime="2018-07-24T02:36:01.562Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-24</time>
+        <a href="/2018/07/24/负基础入门Python_4/" class="archive-article-date">
+  	<time datetime="2018-07-24T02:35:53.603Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-24</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="13-查找"><a href="#13-查找" class="headerlink" title="13.查找"></a>13.查找</h2><h3 id="练习：二分查找"><a href="#练习：二分查找" class="headerlink" title="练习：二分查找"></a>练习：二分查找</h3><p>有序数列找数</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">binary_search</span><span class="params">(lst, item)</span>:</span></div><div class="line"></div><div class="line">    <span class="comment"># 下界索引</span></div><div class="line">    low = <span class="number">0</span></div><div class="line">    <span class="comment"># 上界索引</span></div><div class="line">    high = len(lst) - <span class="number">1</span></div><div class="line"></div><div class="line">    <span class="keyword">while</span> low &lt;= high:</div><div class="line">        <span class="comment"># 中值</span></div><div class="line">        mid = (low + high) // <span class="number">2</span></div><div class="line">        <span class="comment"># 猜测结果</span></div><div class="line">        guess = lst[mid]</div><div class="line"></div><div class="line">        <span class="comment"># 猜中</span></div><div class="line">        <span class="keyword">if</span> guess == item:</div><div class="line">            <span class="keyword">return</span> mid</div><div class="line">        <span class="comment"># 偏大</span></div><div class="line">        <span class="keyword">if</span> guess &gt; item:</div><div class="line">            high = mid - <span class="number">1</span></div><div class="line">        <span class="comment"># 偏小</span></div><div class="line">        <span class="keyword">else</span>:</div><div class="line">            low = mid + <span class="number">1</span></div><div class="line"></div><div class="line">    <span class="comment"># 查找不到</span></div><div class="line">    <span class="keyword">return</span> <span class="keyword">None</span></div><div class="line"></div><div class="line">print(binary_search([<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">8</span>,<span class="number">13</span>], <span class="number">9</span>))</div></pre></td></tr></table></figure>
-<pre><code>None
-</code></pre>
+        <h2 id="10-列表常用函数与方法"><a href="#10-列表常用函数与方法" class="headerlink" title="10. 列表常用函数与方法"></a>10. 列表常用函数与方法</h2><p>sum：求和</p>
+<p>len：获取列表长度</p>
+<p>.append()：添加元素</p>
+<h3 id="练习：距平均数的偏差"><a href="#练习：距平均数的偏差" class="headerlink" title="练习：距平均数的偏差"></a>练习：距平均数的偏差</h3><p>输入参数为数值列表</p>
+<p>计算列表元素平均值（保留两位小数）</p>
+<p>计算列表元素与平均值的差</p>
+<p>返回由偏差组成的列表</p>
+<p>对参数x保留两位小数的函数：round(x,2)</p>
         
-          <a class="article-more-a" href="/2018/07/24/负基础入门Python_5/#more">more >></a>
+          <a class="article-more-a" href="/2018/07/24/负基础入门Python_4/#more">more >></a>
         
       
 
@@ -192,7 +196,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/24/负基础入门Python_5/">more >></a>
+          <a class="article-more-a" href="/2018/07/24/负基础入门Python_4/">more >></a>
         </p>
       
 
@@ -222,31 +226,32 @@
 
 
   
-    <article id="post-博客搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-QT安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/12/博客搭建/">博客搭建</a>
+      <a class="article-title" href="/2017/11/10/QT安装/">第一课 QT安装</a>
     </h1>
   
 
         
-        <a href="/2017/11/12/博客搭建/" class="archive-article-date">
-  	<time datetime="2017-11-12T09:11:04.847Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-12</time>
+        <a href="/2017/11/10/QT安装/" class="archive-article-date">
+  	<time datetime="2017-11-10T03:57:03.558Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>2017年11月12日</p>
-<p>&ensp;&ensp;之前在新浪博客写过一段时间，随后到CSDN，再之后到博客园，各有各的问题，最近CSDN访问老是出现问题，痛下决心，花了一天的时间按照教程搭建了一个自己的博客。<br>&ensp;&ensp;教程是按照<a href="https://zhangslob.github.io/2017/02/28/教你免费搭建个人博客，Hexo-Github/" target="_blank" rel="external">崔斯特的博客</a>做的，没有太大的问题，但有些小问题，不然也不会花一天的时间了，就不重复了。从上往下，挨着说：</p>
-        
-          <a class="article-more-a" href="/2017/11/12/博客搭建/#more">more >></a>
-        
+        <p>&ensp;&ensp;本科开始接触MFC，当时是一门选修课，作为自动化的专业来说，常常需要一个UI来简单的表示一下结果，用的最多的可能就是串口接收了吧，刚好有这个选修课，所以本科一直用MFC来做的界面开发，上了研究生后，时间多一点了，打算系统的学习一些东西，在看《C++ Primer》的同时，发现师兄们做项目，老师依然要求用MFC，其实早于这个时候我就听说MFC已经过时了，要说具体哪里不好，没有这个能力来做评价（网上不懂装懂的人太多了，不想做这样的人233），在知乎逛了一圈，决定开始学习QT，因为同样是基于C++，所以直接在网上找了教程开始学，教程是这个<a href="https://zhuanlan.zhihu.com/p/28224035" target="_blank" rel="external">跟小豆君学QT</a>，重复的不用多说，按照教程走下来，空白窗口没有出现，出现了这样一个错误：<br><font color="red">Failed to start program. Path or permissions wrong?</font><br>当时就虎躯一震，凭感觉这个不是中文路径或者杀毒软件的问题吗？但是我怎么会犯这种错误呢？检查了一下也没有这问题，怀疑是UAC的问题，把UAC关了还是不行。按照惯例一顿搜索，找了一些解决方案：添加环境变量/关闭杀毒软件/不要有中文路径/关闭UAC，当然都不行，一筹莫展，打开工程目录，发现这个文件已经在了，双击打开，可以用啊。之后又想着再来一下，重建了下，发现可以了，突然想起了刚看到的一个<a href="http://bbs.csdn.net/topics/390259409" target="_blank" rel="external">帖子</a>，提到这样一句话：</p>
+<blockquote>
+<p>只要我的target 名称中包含Update或者Installer单词，生成的exe文件就会被UAC限制，改成其他乱七八糟的名字就行。</p>
+</blockquote>
+<p>刚才因为是第一讲安装软件，所以取了个名字叫做setup，重现了下这个错误确实是这样的，改个名字就好了。</p>
+
       
 
       
@@ -259,7 +264,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">博客建设</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">QT学习</a>
         		</li>
       		
 		</ul>
@@ -269,86 +274,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/12/博客搭建/">more >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-负基础入门Python_10" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/24/负基础入门Python_10/">负基础入门Python教程_10</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/24/负基础入门Python_10/" class="archive-article-date">
-  	<time datetime="2018-07-24T02:39:27.056Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="26-NumPy"><a href="#26-NumPy" class="headerlink" title="26. NumPy"></a>26. NumPy</h1><p>官方详细教程：<a href="https://docs.scipy.org/doc/numpy-1.13.0/user/quickstart.html" target="_blank" rel="external">https://docs.scipy.org/doc/numpy-1.13.0/user/quickstart.html</a></p>
-<h2 id="26-1-嵌套列表表示："><a href="#26-1-嵌套列表表示：" class="headerlink" title="26.1 嵌套列表表示："></a>26.1 嵌套列表表示：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">arr_lst = [[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],</div><div class="line">           [<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">5</span>],</div><div class="line">           [<span class="number">11</span>,<span class="number">16</span>,<span class="number">15</span>,<span class="number">6</span>],</div><div class="line">           [<span class="number">10</span>,<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>]]</div><div class="line"></div><div class="line">arr_lst</div></pre></td></tr></table></figure>
-<pre><code>[[1, 2, 3, 4], [12, 13, 14, 5], [11, 16, 15, 6], [10, 9, 8, 7]]
-</code></pre>
-        
-          <a class="article-more-a" href="/2018/07/24/负基础入门Python_10/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/24/负基础入门Python_10/">more >></a>
+          <a class="article-more-a" href="/2017/11/10/QT安装/">more >></a>
         </p>
       
 
@@ -540,6 +466,85 @@
 
 
   
+    <article id="post-负基础入门Python_10" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/07/24/负基础入门Python_10/">负基础入门Python教程_10</a>
+    </h1>
+  
+
+        
+        <a href="/2018/07/24/负基础入门Python_10/" class="archive-article-date">
+  	<time datetime="2018-07-24T02:39:27.056Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="26-NumPy"><a href="#26-NumPy" class="headerlink" title="26. NumPy"></a>26. NumPy</h1><p>官方详细教程：<a href="https://docs.scipy.org/doc/numpy-1.13.0/user/quickstart.html" target="_blank" rel="external">https://docs.scipy.org/doc/numpy-1.13.0/user/quickstart.html</a></p>
+<h2 id="26-1-嵌套列表表示："><a href="#26-1-嵌套列表表示：" class="headerlink" title="26.1 嵌套列表表示："></a>26.1 嵌套列表表示：</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">arr_lst = [[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>],</div><div class="line">           [<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>,<span class="number">5</span>],</div><div class="line">           [<span class="number">11</span>,<span class="number">16</span>,<span class="number">15</span>,<span class="number">6</span>],</div><div class="line">           [<span class="number">10</span>,<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>]]</div><div class="line"></div><div class="line">arr_lst</div></pre></td></tr></table></figure>
+<pre><code>[[1, 2, 3, 4], [12, 13, 14, 5], [11, 16, 15, 6], [10, 9, 8, 7]]
+</code></pre>
+        
+          <a class="article-more-a" href="/2018/07/24/负基础入门Python_10/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/07/24/负基础入门Python_10/">more >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
@@ -633,11 +638,11 @@ getOwnMetadataKeys:function(t){return o(i(t),arguments.length<2?void 0:u(argumen
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">博客建设</a>
+                <a href="javascript:void(0)" class="js-tag color5">QT学习</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">QT学习</a>
+                <a href="javascript:void(0)" class="js-tag color5">博客建设</a>
               </li>
              
               <li class="article-tag-list-item">
